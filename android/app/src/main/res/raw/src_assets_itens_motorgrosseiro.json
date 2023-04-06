@@ -1,0 +1,170 @@
+[
+    {
+        "key": "Movimentos simétricos",
+        "descricao": "Enquanto a criança estiver deitada de costas, observe o movimento dos seus braços e pernas",
+        "ajuda": "Passou: Se a criança movimentar igualmente braços e pernas. Falhou: Se um braço ou perna não se mover tanto quanto o outro(a).",
+        "image": 36,
+        "diaInicial": 0,
+        "diaFinal": 14
+    },
+    {
+        "key": "Levanta a cabeça momentaneamente (R)",
+        "descricao": "Posicione a criança de bruços em superfície plana.",
+        "ajuda": "Passou: Se a criança levantar a cabeça, ainda que momentaneamente, desencostando o queixo da superfície, sem virar-se para um dos lados. Considerar também o relato do cuidador.",
+        "image": 37,
+        "diaInicial": 0,
+        "diaFinal": 19
+    },
+    {
+        "key": "Levanta a cabeça a 45º",
+        "descricao": "Posicione a criança de bruços em superfície plana.",
+        "ajuda": "Passou: Se a criança levantar a cabeça, formando um angulo de 45º com a superfície, por pelo menos alguns segundos. A criança estará olhando para a mesa sobre a qual está deitada.",
+        "image": 38,
+        "diaInicial": 54,
+        "diaFinal": 81
+    },
+    {
+        "key": "Levanta a cabeça a 90º",
+        "descricao": "Posicione a criança de bruços em superfície plana.",
+        "ajuda": "Passou: Se a criança levantar a cabeça e o peito, de maneira que seu rosto forme um ângulo de 90º com a superfície, por pelo menos alguns segundos. A criança estará olhando para frente, apoiando-se no antebraço.",
+        "image": 39,
+        "diaInicial": 87,
+        "diaFinal": 108
+    },
+    {
+        "key": "Sentada sustenta a cabeça",
+        "descricao": "Estando de frente para a criança, coloque-a na posição sentada, mantendo suas mãos como apoio nas costas dela.",
+        "ajuda": "Passou: Se a criança mantiver a cabeça firme, sem movimentos oscilatórios, por pelo menos alguns segundos.",
+        "image": 40,
+        "diaInicial": 90,
+        "diaFinal": 111
+    },
+    {
+        "key": "Sustenta seu peso nas pernas",
+        "descricao": "Segure a criança de pé, de maneira que os pés dela se apoiem sobre a mesa. Devagar, tire o apoio de sustentação das suas mãos, permitindo que a criança sustente o próprio peso.",
+        "ajuda": "Passou: Se a criança sustentar o seu peso nas próprias pernas, por alguns segundos.",
+        "image": 41,
+        "diaInicial": 108,
+        "diaFinal": 132
+    },
+    {
+        "key": "Eleva o peito apoiando os braços",
+        "descricao": "Posicione a criança de bruços em superfície plana.",
+        "ajuda": "Passou: Se a criança levantar a cabeça e o peito da superfície, usando como apoio seus braços esticados, de maneira que possa olhar à frente ou acima.",
+        "image": 42,
+        "diaInicial": 120,
+        "diaFinal": 138
+    },
+    {
+        "key": "Rola (R)",
+        "descricao": "Durante a testagem, observe se a criança consegue rolar sozinha. Se esta observação não for possível, pergunte aos cuidadores se a criança é capaz de virar seu corpo e, se já o fez pelo menos duas vezes.",
+        "ajuda": "Passou: Se a criança mudar de posição, virando-se totalmente, ou se o cuidador relata que ela já o fez pelo menos duas vezes.",
+        "image": 43,
+        "diaInicial": 129,
+        "diaFinal": 162
+    },
+    {
+        "key": "Puxada para sentar cabeça firme",
+        "descricao": "Posicione a criança deitada de costas. Segure as mãos e pulsos dela, puxando-a lentamente, para sentar. Se a criança não sustentar a cabeça, não continue a puxá-la para sentar.",
+        "ajuda": "Passou: Se a criança for capaz de sustentar a cabeça durante todo o tempo em que estiver sendo puxada. A criança também contribuirá na execução do movimento, usando os músculos do ombro e pescoço.",
+        "image": 44,
+        "diaInicial": 123,
+        "diaFinal": 186
+    },
+    {
+        "key": "Mantem-se sentada sem apoio",
+        "descricao": "Segure a criança em posição sentada, em cima da mesa. Assegure-se de que ela não vá cair e, lentamente, retire o apoio.",
+        "ajuda": "Passou: Se a criança se sentar sem apoio, por 5 segundos ou mais. A criança pode colocar as mãos nas pernas ou na mesa para apoiar-se.",
+        "image": 45,
+        "diaInicial": 189,
+        "diaFinal": 204
+    },
+    {
+        "key": "Mantem-se em pé com apoio",
+        "descricao": "Posicione a criança em pé, segurando-se em um objeto firme (não uma pessoa).",
+        "ajuda": "Passou: Se a criança permanecer de pé, segurando-se no objeto, por 5 segundos ou mais.",
+        "image": 46,
+        "diaInicial": 234,
+        "diaFinal": 255
+    },
+    {
+        "key": "Coloca-se em pé",
+        "descricao": "Posicione a criança sentada no chão, perto de uma cadeira ou mesa. Estimule-a a ficar de pé, colocando um brinquedo em cima da cadeira ou mesa.",
+        "ajuda": "Passou: Se a criança conseguir levantar-se sozinha.",
+        "image": 47,
+        "diaInicial": 273,
+        "diaFinal": 291
+    },
+    {
+        "key": "Senta-se (R)",
+        "descricao": "Enquanto a criança estiver deitada (de costas ou de bruços), engatinhando ou de pé estimule-a a sentar. Se não for possível observar, pergunte aos cuidadores se ela é capaz de fazer sozinha.",
+        "ajuda": "Passou: Se o comportamento for observado ou se os cuidadores relatarem que ela o faz.",
+        "image": 48,
+        "diaInicial": 273,
+        "diaFinal": 297
+    },
+    {
+        "key": "Mantem-se em pé 2 segundos sem apoio",
+        "descricao": "Posicione a criança em pé, com apoio. Quando ela parecer equilibrada, remova o apoio.",
+        "ajuda": "Passou: Se a criança ficar em pé, sem apoio, por 2 segundos ou mais.",
+        "image": 49,
+        "diaInicial": 337,
+        "diaFinal": 348
+    },
+    {
+        "key": "Mantem-se em pé sem apoio (10 seg)",
+        "descricao": "Posicione a criança em pé, com apoio. Quando ela parecer equilibrada, remova o apoio.",
+        "ajuda": "Passou: Se a criança ficar em pé sozinha, por 10 segundos ou mais.",
+        "image": 50,
+        "diaInicial": 374,
+        "diaFinal": 411
+    },
+    {
+        "key": "Abaixa-se e levanta-se",
+        "descricao": "Coloque um brinquedo no chão quando a criança estiver em pé e longe de qualquer apoio. Estimule-a a pegá-lo.",
+        "ajuda": "Passou: Se a criança se abaixar para pegar o brinquedo e levantar-se em seguida, sem apoiar-se ou sentar-se.",
+        "image": 51,
+        "diaInicial": 342,
+        "diaFinal": 438
+    },
+    {
+        "key": "Anda bem",
+        "descricao": "Observe a criança andando.",
+        "ajuda": "Passou: Se a criança tiver bom equilíbrio, não cair muito nem cambalear.",
+        "image": 52,
+        "diaInicial": 408,
+        "diaFinal": 447
+    },
+    {
+        "key": "Anda para trás (R)",
+        "descricao": "Demonstre à criança como andar para trás ou observe se ela o faz durante a testagem. Se não for possível observar este comportamento, pergunte aos cuidadores se ela o faz quando, por exemplo, quer puxar um brinquedo, abrir uma porta ou gaveta.",
+        "ajuda": "Passou: Se a criança der alguns passos para trás, sem cair ou sentar, ou ainda se os cuidadores relatarem que ela o faz.",
+        "image": 53,
+        "diaInicial": 456,
+        "diaFinal": 498
+    },
+    {
+        "key": "Corre",
+        "descricao": "Incentive a criança a correr, por exemplo, arremessando uma bola para ela pegar.",
+        "ajuda": "Passou: Se a criança correr, harmoniosamente, sem tropeçar ou cair (não vale andar depressa).",
+        "image": 54,
+        "diaInicial": 534,
+        "diaFinal": 597
+    },
+    {
+        "key": "Sobe degraus (R)",
+        "descricao": "Pergunte aos cuidadores como a criança sobe escadas.",
+        "ajuda": "Passou: Se a criança for capaz de subir em pé a escada, podendo apoiar-se no corrimão ou na parede, mas não de mãos dadas com outra pessoa.",
+        "image": 55,
+        "diaInicial": 573,
+        "diaFinal": 648
+    },
+    {
+        "key": "Chuta a bola",
+        "descricao": "Posicione a bola a aproximadamente 15 cm da criança e peça a ela para chutá-la. Você pode demonstrar como deve ser feito.",
+        "ajuda": "Passou: Se a criança chutar a bola sem apoiar-se. Falhou: Se a criança deslizar ou empurrar a bola com o pé, movimentá-la para trás ou pisar nela.",
+        "image": 56,
+        "diaInicial": 624,
+        "diaFinal": 696
+    }
+]

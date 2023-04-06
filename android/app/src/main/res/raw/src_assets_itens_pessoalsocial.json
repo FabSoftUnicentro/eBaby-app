@@ -1,0 +1,130 @@
+[
+    {
+        "key": "Observa o rosto",
+        "descricao": "Segure a criança ou deixe-a deitada de costas. Posicione seu rosto a, aproximadamente, 30cm acima do rosto dela",
+        "ajuda": "Passou: Se a criança olhar para você, de forma evidente.",
+        "image": 57,
+        "diaInicial": 0,
+        "diaFinal": 30
+    },
+    {
+        "key": "Sorri em resposta",
+        "descricao": "Com a criança deitada de costas, sorria e converse com ela. Não lhe faça cócegas e/ou toque em sua face.",
+        "ajuda": "Passou: Se a criança sorrir em resposta. O objetivo é obter mais uma resposta social do que fisica.",
+        "image": 58,
+        "diaInicial": 36,
+        "diaFinal": 45
+    },
+    {
+        "key": "Sorri espontaneamente (R)",
+        "descricao": "Durante toda testagem, observe se a criança sorri para você e/ou para os cuidadores, sem que tenha havido qualquer estimulação (através de toques ou sons). Caso isso não ocorra, pergunte aos cuidadores se a criança alguma vez já sorriu, espontaneamente, para uma pessoa, sem que esta a tenha tocado ou falado com ela.",
+        "ajuda": "Passou: Se a criança sorrir, espontaneamente, para você ou para os cuidadores, durante a testagem; também se os cuidadores relatarem que ela o faz em casa. O objetivo é verificar se a criança já é capaz de iniciar uma interação social.",
+        "image": 59,
+        "diaInicial": 42,
+        "diaFinal": 63
+    },
+    {
+        "key": "Observa a própria mão (R)",
+        "descricao": "Durante toda testagem, observe se a criança fixa o olhar em suas próprias mãos, por pelo menos alguns segundos (não poderá ser um olhar de relance nem de forma passageira). Caso isso não ocorra, pergunte aos cuidadores se a criança alguma vez já o fez.",
+        "ajuda": "Passou: Se os cuidadores reportarem que ela o faz ou se o examinador observar isto, durante a testagem.",
+        "image": 60,
+        "diaInicial": 93,
+        "diaFinal": 120
+    },
+    {
+        "key": "Tenta alcançar o brinquedo",
+        "descricao": "Apanhe um brinquedo que a criança pareça gostar e coloque-o sobre a mesa, um pouco fora do alcance dela. ",
+        "ajuda": "Passou: Se a criança tentar apanhar o brinquedo, estendendo o braço ou lançando seu corpo. Ela não precisa, necessariamente, apanhar o brinquedo.",
+        "image": 61,
+        "diaInicial": 159,
+        "diaFinal": 177
+    },
+    {
+        "key": "Come sozinha",
+        "descricao": "Pergunte aos cuidadores se a criança já coloca na boca um biscoito que lhe é dado.",
+        "ajuda": "Passou: Se os cuidadores reportarem que ela o faz. Anote “Não Observado“ se a criança nunca tiver experimentado este tipo de alimento. ", 
+        "image": 62,
+        "diaInicial": 177,
+        "diaFinal": 195
+    },
+    {
+        "key": "Bate palmas (R)",
+        "descricao": "Sem tocar nas mãos ou braços da criança, cante “Parabéns a você”, batendo palmas. Pergunte para a criança “Vamos cantar parabéns a você ?”. Caso a criança não queira fazê-lo, peça aos cuidadores para tentarem estimulá-la. Se mesmo assim a criança se recusar a bater palmas, pergunte aos cuidadores se ela o faz em casa. ",
+        "ajuda": "Passou: Se o examinador observar que a criança bate palmas ou se os cuidadores reportarem que ela o faz. Também considerar qualquer outro tipo de jogo de bater palmas que a criança seja capaz de participar. O objetivo do teste é verificar a interação da criança com uma outra pessoa.",
+        "image": 63,
+        "diaInicial": 312,
+        "diaFinal": 342
+    },
+    {
+        "key": "Mostra o que quer (Sem chorar) (R)",
+        "descricao": "Durante a testagem, observe se a criança indica para você ou para os cuidadores que ela quer algo, sem que seja através do choro. Caso isto não possa ser observado, pergunte aos cuidadores se ela o faz.",
+        "ajuda": "Passou: Se você observar que a criança usa outro meio que não o choro, para comunicar um desejo específico, ou se os cuidadores reportarem que ela o faz. Alguns exemplos de meios usados para se comunicar: apontar, procurar e fazer sons, estender as mãos para alcançar, puxar e dizer uma palavra. ",
+        "image": 64,
+        "diaInicial": 330,
+        "diaFinal": 387
+    },
+    {
+        "key": "Dá tchau (R)",
+        "descricao": "Caso seja possível, a melhor maneira de se administrar este teste é quando o cuidador e a criança estiverem indo embora ou deixando a sala. Olhe para a criança e diga 'tchau-tchau', enquanto acena para ela. Não toque-a nem permita que o cuidador mexa nas mãos e/ou braços dela. Caso a criança não responda, pergunte aos cuidadores se ela acena para outras pessoas.",
+        "ajuda": "Passou: Se a criança responder, levantando seu braço ou balançando suas mãos ou dedos, ou se os cuidadores reportarem que ela o faz.",
+        "image": 65,
+        "diaInicial": 276,
+        "diaFinal": 420
+    },
+    {
+        "key": "Joga bola com o examinador",
+        "descricao": "Role a bola para a criança e tente fazer com que ela a devolva a para você, rolando-a ou jogando-a. Você pode precisar rolar a bola para frente e para trás, várias vezes.",
+        "ajuda": "Passou: Se a criança rolar ou jogar a bola para você, intencionalmente. (Devolver a bola, entregando-a para você, não é considerado “passou”).",
+        "image": 66,
+        "diaInicial": 357,
+        "diaFinal": 471
+    },
+    {
+        "key": "Imita a Ação de Uma Pessoa (R)",
+        "descricao": "Pergunte aos cuidadores se a criança imita atividades realizadas em casa, tais como tirar o pó, passar pano, varrer, aspirar o pó ou falar ao telefone.",
+        "ajuda": "Passou: Se os cuidadores reportarem que a criança imita algum tipo de tarefa caseira.",
+        "image": 67,
+        "diaInicial": 375,
+        "diaFinal": 480
+    },
+    {
+        "key": "Bebe na caneca (R)",
+        "descricao": "Pergunte aos cuidadores se a criança é capaz de segurar um copo ou uma xícara sem asa e beber sozinha, derramando menos da metade do líquido.",
+        "ajuda": "Passou: Se os cuidadores reportarem que a criança o faz.",
+        "image": 68,
+        "diaInicial": 456,
+        "diaFinal": 513
+    },
+    {
+        "key": "Ajuda em Casa (Tarefas simples) (R)",
+        "descricao": "Pergunte aos cuidadores se a criança ajuda em casa, na execução de tarefas simples, tais como guardar brinquedos, jogar o lixo fora ou entregar um objeto quando pedido.",
+        "ajuda": "Passou: Se a criança realmente ajuda e não somente imita a atividade. O objetivo deste teste é verificar se a criança compreende e atende a solicitação para execução de tarefas simples.",
+        "image": 69,
+        "diaInicial": 474,
+        "diaFinal": 519
+    },
+    {
+        "key": "Usa Colher/Garfo (R)",
+        "descricao": "Pergunte aos cuidadores se a criança usa colher ou garfo para se alimentar. Se ela o fizer, pergunte o quanto ela derrama.",
+        "ajuda": "Passou: Se a criança usar colher ou garfo, derramando pouco fora da boca. O objetivo é verificar se a criança é auto-suficiente o bastante para alimentar-se.",
+        "image": 70,
+        "diaInicial": 525,
+        "diaFinal": 597
+    },
+    {
+        "key": "Tira a roupa (R)",
+        "descricao": "Pergunte aos cuidadores se a criança é capaz de remover alguma peça de roupa e, se afirmativo, quais as peças.",
+        "ajuda": "Passou: Se a criança for capaz de remover itens tais como sapatos que exijam esforço para sua remoção, casacos, calças ou camisetas. Não considerar meias, fraldas, chinelo ou sapatos que sejam fáceis de retirar. O objetivo é verificar se a criança é capaz de remover, intencionalmente, uma peça de roupa, demonstrando autonomia.",
+        "image": 71,
+        "diaInicial": 612,
+        "diaFinal": 717
+    },
+    {
+        "key": "Alimenta uma boneca",
+        "descricao": "Coloque uma boneca e uma mamadeira sobre a mesa, em frente à criança. Peça para a criança “Vamos dar comidinha para o neném ?”",
+        "ajuda": "Passou: Se a criança colocar a mamadeira na boca da boneca ou, claramente, tentar fazê-lo. Imitar amamentar no peito não é considerado passou. Caso isto ocorra, encoraje a criança a usar a mamadeira.",
+        "image": 72,
+        "diaInicial": 576,
+        "diaFinal": 720
+    }
+]

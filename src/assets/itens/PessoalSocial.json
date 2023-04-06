@@ -1,0 +1,178 @@
+[
+    {
+        "key": "Observa o Rosto",
+        "descricao": "Segure a criança ou deixe-a deitada de costas. Posicione seu rosto a aproximadamente 30cm acima do rosto dela.",
+        "pergunta": "“A criança olha para o profissional de forma evidente?”",
+        "pode": "",
+        "vale": "",
+        "naovale": "",
+        "image": 57,
+        "diaInicial": 0,
+        "diaFinal": 30
+    },
+    {
+        "key": "Sorri em Resposta",
+        "descricao": "Posicione a criança deitada de costas, sorria e converse com ela. Não lhe faça cócegas ou toque em sua face. O objetivo é obter uma resposta social, não física.",
+        "pergunta": "“A criança sorri em resposta ao profissional?”",
+        "pode": "",
+        "vale": "",
+        "naovale": "",
+        "image": 58,
+        "diaInicial": 36,
+        "diaFinal": 45
+    },
+    {
+        "key": "Sorri Espontaneamente",
+        "descricao": "Observe se a criança sorri pra o profissional ou para os responsáveis. Não pode haver qualquer estimulação por toque ou sons. O objetivo é verificar se a criança inicia uma interação social.",
+        "pergunta": "“A criança sorri mesmo quando não estão falando ou tocando nela?”",
+        "pode": "perguntar aos responsáveis se a criança já sorriu espontaneamente.",
+        "vale": "",
+        "naovale": "",
+        "image": 59,
+        "diaInicial": 42,
+        "diaFinal": 63
+    },
+    {
+        "key": "Observa a Própria Mão",
+        "descricao": "Observe se criança fixa o olhar em suas próprias mãos durante alguns segundos. Não poderá ser olhar de relance ou de forma passageira.",
+        "pergunta": "“A criança fixa o olhar nas próprias mãos durante alguns segundos?”",
+        "pode": "perguntar aos responsáveis se a criança já fez isto.",
+        "vale": "",
+        "naovale": "",
+        "image": 60,
+        "diaInicial": 93,
+        "diaFinal": 120
+    },
+    {
+        "key": "Tenta Alcançar o Brinquedo",
+        "descricao": "Coloque sobre a mesa um brinquedo que a criança aparentemente goste, um pouco fora do alcance dela. Ela não precisa alcançar o brinquedo, apenas tentar.",
+        "pergunta": "“A criança tenta alcançar o brinquedo, estendendo o braço ou o corpo em direção ao brinquedo?”",
+        "pode": "",
+        "vale": "",
+        "naovale": "",
+        "image": 61,
+        "diaInicial": 159,
+        "diaFinal": 177
+    },
+    {
+        "key": "Segura o Alimento",
+        "descricao": "Pergunte aos responsáveis: ",
+        "pergunta": "“A criança já coloca na boca algum alimento usando as próprias mãos?”",
+        "pode": "",
+        "vale": "biscoito, pão ou qualquer alimento que estiver nas mãos.",
+        "naovale": "brinquedo ou qualquer outro objeto.",
+        "image": 62,
+        "diaInicial": 177,
+        "diaFinal": 195
+    },
+    {
+        "key": "Bate Palmas",
+        "descricao": "Sem tocar nas mãos ou braços da criança, cante “parabéns pra você” enquanto bate palmas. O objetivo é verificar a interação da criança.",
+        "pergunta": "Pergunte para a criança “vamos cantar parabéns pra você?”",
+        "pode": "perguntar aos responsáveis se a criança já bateu palmas em qualquer brincadeira.",
+        "vale": "",
+        "naovale": "",
+        "image": 63,
+        "diaInicial": 312,
+        "diaFinal": 342
+    },
+    {
+        "key": "Mostra o Que Quer",
+        "descricao": "Observe se a criança indica a você ou aos responsáveis o que ela quer, sem chorar.",
+        "pergunta": "“A criança indica o que quer?”",
+        "pode": "perguntar aos responsáveis se a criança já indica o que ela quer.",
+        "vale": "erguer os braços, apontar, falar, tentar alcançar, fazer sons, por exemplo.",
+        "naovale": "",
+        "image": 64,
+        "diaInicial": 330,
+        "diaFinal": 387
+    },
+    {
+        "key": "Dá Tchau",
+        "descricao": "Não toque nem permita que os cuidadores mexam nas mãos ou braços da criança. Acenando para a criança diga: “Vamos dar tchau-tchau?",
+        "pergunta": "A criança acena para você?",
+        "pode": "perguntar aos responsáveis se ela acena para outras pessoas.",
+        "vale": "a criança levantar o braço ou balançar suas mãos ou dedos.",
+        "naovale": "",
+        "image": 65,
+        "diaInicial": 276,
+        "diaFinal": 420
+    },
+    {
+        "key": "Joga Bola Com o Examinador",
+        "descricao": "Role a bola para a criança e tente fazer com que devolva a bola para você, seja rolando ou jogando. Você pode, para demonstrar, rolar a bola para frente e para trás algumas vezes.",
+        "pergunta": "“A criança rola ou joga a bola para o profissional intencionalmente?",
+        "pode": "",
+        "vale": "",
+        "naovale": "a criança entregar a bola para você.",
+        "image": 66,
+        "diaInicial": 357,
+        "diaFinal": 471
+    },
+    {
+        "key": "Imita a Ação de Uma Pessoa",
+        "descricao": "Pergunte aos responsáveis:",
+        "pergunta": "“A criança já imita atividades realizadas em casa, como por exemplo: tirar o pó, passar pano, varrer ou falar no telefone?”",
+        "pode": "",
+        "vale": "",
+        "naovale": "",
+        "image": 67,
+        "diaInicial": 375,
+        "diaFinal": 480
+    },
+    {
+        "key": "Bebe na Caneca",
+        "descricao": "Pergunte aos responsáveis:",
+        "pergunta": "“A criança já é capaz de segurar uma caneca (sem tampa ou bico) e beber sozinha, derramando menos da metade do líquido?”",
+        "pode": "",
+        "vale": "",
+        "naovale": "",
+        "image": 68,
+        "diaInicial": 456,
+        "diaFinal": 513
+    },
+    {
+        "key": "Realiza Atividades Simples",
+        "descricao": "O objetivo é verificar se a criança compreende e atende a solicitação de execução de uma tarefa simples.",
+        "pergunta": "Pergunte aos responsáveis: “A criança já ajuda na execução de tarefas simples de casa quando solicitado?”",
+        "pode": "",
+        "vale": "guardar brinquedos, jogar o lixo fora ou entregar um objeto.",
+        "naovale": "",
+        "image": 69,
+        "diaInicial": 474,
+        "diaFinal": 519
+    },
+    {
+        "key": "Usa Colher/Garfo",
+        "descricao": "O objetivo é verificar se a criança é autossuficiente o bastante para alimentar-se.",
+        "pergunta": "Pergunte aos responsáveis: “A criança usa colher ou garfo para a própria alimentação derramando pouco?”",
+        "pode": "",
+        "vale": "a criança levar mais da metade da comida até a boca usando colher ou garfo.",
+        "naovale": "",
+        "image": 70,
+        "diaInicial": 525,
+        "diaFinal": 597
+    },
+    {
+        "key": "Autonomia Para Desvestir",
+        "descricao": "O objetivo é verificar a autonomia da criança avaliando a capacidade de remover, intencionalmente, uma peça de roupa de difícil remoção.",
+        "pergunta": "Pergunte ao responsável: “A criança já é capaz de tirar alguma peça de roupa?”",
+        "pode": "",
+        "vale": "remoção de casacos, calças ou camisetas.",
+        "naovale": "meias, fraldas, chinelo.",
+        "image": 71,
+        "diaInicial": 612,
+        "diaFinal": 717
+    },
+    {
+        "key": "Alimenta Uma Boneca",
+        "descricao": "Coloque uma boneca e a mamadeira sobre a mesa, em frente a criança.",
+        "pergunta": "Peça para a criança: “Dê comidinha/mamadeira para o neném?”",
+        "pode": "",
+        "vale": "colocar a mamadeira na boca da boneca ou tentar.",
+        "naovale": "imitar amamentar no peito.",
+        "image": 72,
+        "diaInicial": 576,
+        "diaFinal": 720
+    }
+]
