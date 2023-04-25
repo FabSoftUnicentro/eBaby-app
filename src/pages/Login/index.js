@@ -1,16 +1,18 @@
 /* eslint-disable no-shadow */
-import React, {useState, useEffect} from 'react';
+import NetInfo from '@react-native-community/netinfo';
+import React, {useEffect, useState} from 'react';
 import {
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-  ToastAndroid,
   Animated,
   Easing,
+  Text,
+  TextInput,
+  ToastAndroid,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import NetInfo from '@react-native-community/netinfo';
+
 import api from '../../services/api';
+
 const Agent = require('../../storage/controllers/AgentController');
 import BoldText from '../../components/BoldText';
 import NormalText from '../../components/NormalText';
