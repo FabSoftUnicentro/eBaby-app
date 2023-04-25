@@ -22,7 +22,7 @@ import OrangeButton from '../../components/OrangeButton';
 import LinearGradient from 'react-native-linear-gradient';
 import LottieView from 'lottie-react-native';
 
-const Login = props => {
+const Login = (props) => {
   const [email, setEmail] = useState('');
   const [progress, setProgress] = useState(new Animated.Value(0));
   const [password, setPassword] = useState('');
@@ -38,9 +38,9 @@ const Login = props => {
         duration: 2000,
         easing: Easing.linear,
       }).start(() => {
-        if (authenticated){
+        if (authenticated) {
           props.navigation.navigate('Home');
-        }           
+        }
       });
     }
   }, [loading, authenticated]);
@@ -49,10 +49,10 @@ const Login = props => {
     setProgress(new Animated.Value(0));
     setIsDisable(true);
     const body = {email, password};
-    NetInfo.fetch().then(state => {
+    NetInfo.fetch().then((state) => {
       if (state.isInternetReachable) {
         setLoading(true);
-        api.post('/authenticate', body, {timeout: 10000}).then(res => {
+        api.post('/authenticate', body, {timeout: 10000}).then((res) => {
           if (res.data.success === true) {
             const agent = {
               cpf: res.data.user.cpf,
@@ -80,7 +80,8 @@ const Login = props => {
     <LinearGradient
       start={{x: 0, y: 0}}
       colors={['#c0dfdf', '#ACD2EA', '#5aabab']}
-      style={styles.container}>
+      style={styles.container}
+    >
       <BoldText text="Bem vindo Profissional de Saúde da Família" />
       <View>
         <NormalText text="Acompanhamento do Desenvolvimento Infantil eDenver" />
@@ -93,7 +94,7 @@ const Login = props => {
           />
           <TextInput
             style={styles.input}
-            onChangeText={email => setEmail(email)}
+            onChangeText={(email) => setEmail(email)}
             placeholderTextColor={'#505050'}
             value={email}
             placeholder={'Email'}
@@ -108,7 +109,7 @@ const Login = props => {
           />
           <TextInput
             style={styles.input}
-            onChangeText={password => setPassword(password)}
+            onChangeText={(password) => setPassword(password)}
             placeholderTextColor={'#505050'}
             value={password}
             secureTextEntry={!show}
@@ -116,7 +117,8 @@ const Login = props => {
           />
           <TouchableOpacity
             style={styles.inputIconRight}
-            onPress={() => setShow(!show)}>
+            onPress={() => setShow(!show)}
+          >
             <Icon
               name={'ios-eye'}
               size={26}
@@ -124,7 +126,11 @@ const Login = props => {
             />
           </TouchableOpacity>
         </View>
-        <OrangeButton buttonText="Entrar" onClick={() => handleLogIn()} disabled={isDisable}/>
+        <OrangeButton
+          buttonText="Entrar"
+          onClick={() => handleLogIn()}
+          disabled={isDisable}
+        />
       </View>
       <View>
         <BoldText text="Não possui cadastro?" />
@@ -133,12 +139,20 @@ const Login = props => {
             testID={'GoToRegisterAgent'}
             onPress={() => {
               props.navigation.navigate('RegisterAgent');
-            }}>
+            }}
+          >
             <Text style={styles.orangeText}>Cadastre Aqui</Text>
           </TouchableOpacity>
         </View>
       </View>
-      {loading ? <LottieView source={require('../../assets/animations/loading.json')} progress={progress} loop={true} autoPlay={true}/> : null}
+      {loading ? (
+        <LottieView
+          source={require('../../assets/animations/loading.json')}
+          progress={progress}
+          loop={true}
+          autoPlay={true}
+        />
+      ) : null}
     </LinearGradient>
   );
 };
