@@ -53,9 +53,9 @@ const Login = props => {
         api.post('/authenticate', body, {timeout: 10000}).then(res => {
           if (res.data.success === true) {
             const agent = {
-              cpf: res.data.cpfAgente,
-              email: res.data.email,
-              name: res.data.name,
+              cpf: res.data.user.cpf,
+              email: res.data.user.email,
+              name: res.data.user.name,
               token: res.data.token,
             };
             Agent.store(agent);
