@@ -1,36 +1,35 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Alert,
-  ToastAndroid,
-} from 'react-native';
-import OrangeButton from '../../components/OrangeButton';
 import NetInfo from '@react-native-community/netinfo';
+import React, {useEffect, useState} from 'react';
+import {
+  Alert,
+  ScrollView,
+  Text,
+  ToastAndroid,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
+import OrangeButton from '../../components/OrangeButton';
 import api from '../../services/api';
+
 const TestKid = require('../../storage/controllers/TestKidController');
 import styles from './styles';
 const Kid = require('../../storage/controllers/KidController');
 const Agent = require('../../storage/controllers/AgentController');
 
 const Item = ({name}) => {
-  return (
-    <View style={styles.item}>
-      <View style={styles.itemLeftPartition}>
-        <Text style={styles.name} numberOfLines={2}>
-          {name}
-        </Text>
+  return (<View style = {styles.item}><View style = {styles.itemLeftPartition}>
+          <Text style = {styles.name} numberOfLines = {2}>{
+              name}</Text>
       </View>
-      <View style={styles.itemRightPartition}>
-        <Text style={styles.pendent}>ENVIO</Text>
+          <View style = {styles.itemRightPartition}>
+          <Text style = {styles.pendent}>
+              ENVIO</Text>
         <Text style={styles.pendent}>PENDENTE</Text>
-      </View>
-    </View>
-  );
+          </View>
+    </View>);
 };
 
 const Historic = props => {
