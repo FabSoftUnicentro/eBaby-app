@@ -15,6 +15,7 @@ import api from '../../services/api';
 const TestKid = require('../../storage/controllers/TestKidController');
 import styles from './styles';
 const Kid = require('../../storage/controllers/KidController');
+const Agent = require('../../storage/controllers/AgentController');
 
 const Item = ({name}) => {
   return (
@@ -49,6 +50,7 @@ const Historic = props => {
     setIsDisable(true);
     const testkid = TestKid.index();
     const kid = Kid.getAllDone();
+    const agent = Agent.index();
 
     if (
       JSON.stringify(kid) !== JSON.stringify({}) &&
@@ -56,8 +58,9 @@ const Historic = props => {
     ) {
       var kidJSON = Array.from(kid);
       var tkJSON = Array.from(testkid);
+      var agentJSON = agent;
 
-      var body = {kid: kidJSON, testkid: tkJSON};
+      var body = {agent: agentJSON, kid: kidJSON, testkid: tkJSON};
       body = JSON.stringify(body, (key, value) => {
         if (key === 'itens') {
           return Array.from(value);
@@ -69,7 +72,7 @@ const Historic = props => {
       NetInfo.fetch().then(state => {
         if (state.isInternetReachable) {
           api
-            .post('/registerTestKid', body, {timeout: 10000})
+            .post('/registerKid', body, {timeout: 10000})
             .then(res => {
               if (res.data.success === true) {
                 Kid.destroy(kid);
