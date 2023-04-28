@@ -20,19 +20,22 @@ const Kid = require('../../storage/controllers/KidController');
 const Agent = require('../../storage/controllers/AgentController');
 
 const Item = ({name}) => {
-  return (<View style = {styles.item}><View style = {styles.itemLeftPartition}>
-          <Text style = {styles.name} numberOfLines = {2}>{
-              name}</Text>
+  return (
+    <View style={styles.item}>
+      <View style={styles.itemLeftPartition}>
+        <Text style={styles.name} numberOfLines={2}>
+          {name}
+        </Text>
       </View>
-          <View style = {styles.itemRightPartition}>
-          <Text style = {styles.pendent}>
-              ENVIO</Text>
+      <View style={styles.itemRightPartition}>
+        <Text style={styles.pendent}>ENVIO</Text>
         <Text style={styles.pendent}>PENDENTE</Text>
-          </View>
-    </View>);
+      </View>
+    </View>
+  );
 };
 
-const Historic = props => {
+const Historic = (props) => {
   const [dataArray, setDataArray] = useState([]);
   const [isDisable, setIsDisable] = useState(false);
 
@@ -68,11 +71,11 @@ const Historic = props => {
       });
 
       body = JSON.parse(body);
-      NetInfo.fetch().then(state => {
+      NetInfo.fetch().then((state) => {
         if (state.isInternetReachable) {
           api
             .post('/registerKid', body, {timeout: 10000})
-            .then(res => {
+            .then((res) => {
               if (res.data.success === true) {
                 Kid.destroy(kid);
                 TestKid.destroy(testkid);
@@ -92,7 +95,7 @@ const Historic = props => {
                 setIsDisable(false);
               }
             })
-            .catch(res => {
+            .catch((res) => {
               Alert.alert(
                 'Não foi possivel estabelecer conexao com o servidor!',
                 'Tente os envios dos dados mais tarde',
@@ -127,24 +130,36 @@ const Historic = props => {
     <LinearGradient
       start={{x: 0, y: 0}}
       colors={['#c0dfdf', '#ACD2EA', '#5aabab']}
-      style={{flex: 1}}>
+      style={{flex: 1}}
+    >
       {JSON.stringify(dataArray) !== JSON.stringify([]) ? (
         <>
-        <ScrollView>
-        {dataArray.map(item => (
-          <Item key={item.cpfKid} name={getKidName(item.cpfKid)} />
-        ))}
-        </ScrollView>
-        <View style={{height: 68, justifyContent: 'center', paddingHorizontal: '5%'}}>
-          <OrangeButton
-            onClick={() => handleSendAll()}
-            buttonText={'ENVIAR TODOS'}
-            disabled={isDisable}
-          />
-        </View>
+          <ScrollView>
+            {dataArray.map((item) => (
+              <Item key={item.cpfKid} name={getKidName(item.cpfKid)} />
+            ))}
+          </ScrollView>
+          <View
+            style={{
+              height: 68,
+              justifyContent: 'center',
+              paddingHorizontal: '5%',
+            }}
+          >
+            <OrangeButton
+              onClick={() => handleSendAll()}
+              buttonText={'ENVIAR TODOS'}
+              disabled={isDisable}
+            />
+          </View>
         </>
-      ) : <View style={styles.withoutTestView}><Text style={styles.textAlert}>Voce nao tem nenhum teste com envio pendente</Text></View>}
-      
+      ) : (
+        <View style={styles.withoutTestView}>
+          <Text style={styles.textAlert}>
+            Voce nao tem nenhum teste com envio pendente
+          </Text>
+        </View>
+      )}
     </LinearGradient>
   );
 };
