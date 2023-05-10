@@ -185,7 +185,7 @@ const TestItem = props => {
           disabled={isDisable}
           onPress={() => {
             setIsDisable(true);
-            updateTestKid('Falha');
+            updateTestKid(false);
           }}>
           <Text style={styles.buttonText}>Não</Text>
         </TouchableOpacity>
@@ -194,7 +194,7 @@ const TestItem = props => {
           disabled={isDisable}
           onPress={() => {
             setIsDisable(true);
-            updateTestKid('Acerto');
+            updateTestKid(true);
           }}>
           <Text style={styles.buttonText}>Sim</Text>
         </TouchableOpacity>
