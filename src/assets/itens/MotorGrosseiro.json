@@ -1,5 +1,6 @@
 [
     {
+        "id": 36,
         "key": "Movimentos Simétricos",
         "descricao": "Enquanto a criança estiver deitada de costas, observe o movimento dos seus braços e pernas.",
         "pergunta": "“A criança movimenta igualmente braços e pernas?”",
@@ -11,6 +12,7 @@
         "diaFinal": 14
     },
     {
+        "id": 37,
         "key": "Levanta a Cabeça Momentaneamente",
         "descricao": "Posicione a criança de bruços em superfície plana.",
         "pergunta": "“A criança levanta a cabeça, ainda que momentaneamente, desencostando o queixo da superfície, sem virar-se para um dos lados?”",
@@ -23,6 +25,7 @@
     },
     {
         "key": "Levanta a Cabeça a 45º",
+        "id": 38,
         "descricao": "Posicione a criança de bruços em superfície plana.",
         "pergunta": "“A criança levanta a cabeça, formando um ângulo de 45º com a superfície, por pelo menos alguns segundos?”",
         "dica": "criança estará olhando para a mesa sobre a qual está deitada.",
@@ -35,6 +38,7 @@
     },
     {
         "key": "Levanta a Cabeça a 90º",
+        "id": 39,
         "descricao": "Posicione a criança de bruços em superfície plana.",
         "pergunta": "“A criança levanta a cabeça e o peito, de maneira que seu rosto forme um ângulo de 90º com a superfície, por pelo menos alguns segundos?”",
         "dica": "a criança ficará olhando para frente, apoiando-se no antebraço.",
@@ -46,6 +50,7 @@
         "diaFinal": 108
     },
     {
+        "id": 40,
         "key": "Sentada Sustenta a Cabeça",
         "descricao": "De frente para a criança, coloque-a na posição sentada, mantendo suas mãos como apoio nas costas dela.",
         "pergunta": "“A criança mantém a cabeça firme, sem movimentos oscilatórios, durante alguns segundos?”",
@@ -57,6 +62,7 @@
         "diaFinal": 111
     },
     {
+        "id": 41,
         "key": "Sustenta Seu Peso Nas Pernas",
         "descricao": "Segure a criança em pé, de maneira que os pés dela se apoiem sobre a mesa. Devagar, tire o apoio de sustentação das suas mãos, permitindo que a criança sustente o próprio peso.",
         "pergunta": "“A criança sustenta o seu peso nas próprias pernas, durante alguns segundos?”",
@@ -69,6 +75,7 @@
     },
     {
         "key": "Eleva o Peito Apoiando os Braços",
+        "id": 42,
         "descricao": "Posicione a criança de bruços em superfície plana.",
         "pergunta": "“A criança levanta a cabeça e o peito da superfície, usando como apoio seus braços esticados?”",
         "dica": "a criança poderá olhar à frente ou acima.",
@@ -80,6 +87,7 @@
         "diaFinal": 138
     },
     {
+        "id": 43,
         "key": "Rola",
         "descricao": "Observe se a criança consegue rolar sozinha.",
         "pergunta": "“A criança muda de posição, virando o corpo totalmente?”",
@@ -92,6 +100,7 @@
     },
     {
         "key": "Puxada Para Sentar Cabeça Firme",
+        "id": 44,
         "descricao": "Posicione a criança deitada de costas. Segure as mãos e pulsos dela, puxando-a lenta e cuidadosamente para sentar.\nSe a criança não sustentar a cabeça, NÃO continue a puxá-la",
         "pergunta": "“A criança foi capaz de sustentar a cabeça durante todo o tempo em que foi puxada?”",
         "dica": "criança também contribuirá na execução do movimento, usando os músculos do ombro e pescoço.",
@@ -103,6 +112,7 @@
         "diaFinal": 186
     },
     {
+        "id": 45,
         "key": "Mantem-se Sentada Sem Apoio",
         "descricao": "Segure a criança em posição sentada, em cima da mesa. Assegure-se de que ela não vá cair e, lentamente, retire o apoio.",
         "pergunta": "“A criança permaneceu sentada sem apoio, por 5 segundos ou mais?”",
@@ -114,6 +124,7 @@
         "diaFinal": 204
     },
     {
+        "id": 46,
         "key": "Mantem-se em Pé Com Apoio",
         "descricao": "Posicione a criança em pé, segurando-se em um objeto firme (não pode ser uma pessoa).",
         "pergunta": "“A criança permaneceu de pé, segurando-se no objeto, por 5 segundos ou mais?”",
@@ -125,6 +136,7 @@
         "diaFinal": 255
     },
     {
+        "id": 47,
         "key": "Coloca-se em Pé",
         "descricao": "Posicione a criança sentada no chão, perto de uma cadeira ou mesa. Estimule-a a ficar em pé, colocando um brinquedo em cima da cadeira ou mesa.",
         "pergunta": "“A criança conseguiu levantar-se sozinha?”",
@@ -136,6 +148,7 @@
         "diaFinal": 291
     },
     {
+        "id": 48,
         "key": "Senta-se",
         "descricao": "Enquanto a criança estiver deitada (de costas ou de bruços), engatinhando ou em pé, estimule-a a sentar.",
         "pergunta": "“A criança sentou-se sozinha durante a avaliação?”",
@@ -147,6 +160,7 @@
         "diaFinal": 297
     },
     {
+        "id": 49,
         "key": "Mantem-se em Pé 2 Segundos Sem Apoio",
         "descricao": "Posicione a criança em pé, com apoio. Quando ela parecer equilibrada, remova o apoio.",
         "pergunta": "“A criança ficou em pé sem apoio, por 2 segundos ou mais?”",
@@ -158,6 +172,7 @@
         "diaFinal": 348
     },
     {
+        "id": 50,
         "key": "Mantem-se em Pé Sem Apoio (10 seg)",
         "descricao": "Posicione a criança em pé, com apoio. Quando ela parecer equilibrada, remova o apoio.",
         "pergunta": "“A criança ficou em pé sozinha por 10 segundos ou mais?”",
@@ -169,6 +184,7 @@
         "diaFinal": 411
     },
     {
+        "id": 51,
         "key": "Abaixa-se e Levanta-se",
         "descricao": "Coloque um brinquedo no chão quando a criança estiver em pé e longe de qualquer apoio. Estimule-a a pegá-lo.",
         "pergunta": "“A criança abaixou-se para pegar o brinquedo e levantou-se em seguida?”",
@@ -180,6 +196,7 @@
         "diaFinal": 438
     },
     {
+        "id": 52,
         "key": "Anda Bem",
         "descricao": "Observe a criança andando.",
         "pergunta": "“A criança anda com bom equilíbrio?”",
@@ -191,6 +208,7 @@
         "diaFinal": 447
     },
     {
+        "id": 53,
         "key": "Anda Para Trás",
         "descricao": "Demonstre à criança como andar para trás e observe se ela o faz durante a testagem, se ela anda alguns passos para trás, sem cair ou sentar.",
         "pergunta": "“A criança caminhou para trás durante a avaliação?”",
@@ -203,6 +221,7 @@
     },
     {
         "key": "Corre",
+        "id": 54,
         "descricao": "Incentive a criança a correr, por exemplo, arremessando uma bola para ela pegar.",
         "pergunta": "“A criança corre, harmoniosamente, sem tropeçar ou cair?”",
         "atencao": "andar depressa, é diferente de correr! Não Vale!",
@@ -214,6 +233,7 @@
         "diaFinal": 597
     },
     {
+        "id": 55,
         "key": "Sobe Degraus",
         "descricao": "Pergunte aos responsáveis:",
         "pergunta": "“A criança é capaz de subir em pé a escada?”",
@@ -225,6 +245,7 @@
         "diaFinal": 648
     },
     {
+        "id": 56,
         "key": "Chuta a Bola",
         "descricao": "Posicione a bola a aproximadamente 15cm da criança e peça a ela para chutá-la. Você pode demonstrar como deve ser feito.",
         "pergunta": "“A criança chuta a bola sem apoiar-se?”",

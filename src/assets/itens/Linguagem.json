@@ -1,5 +1,6 @@
 [
     {
+        "id": 0, 
         "key": "Reage ao Sino",
         "descricao": "Segure o sino um pouco atrás da orelha da criança, de tal maneira que ela não possa vê-lo. Balance o sino suavemente. Se a criança não responder, repita o procedimento.",
         "pergunta": "“A criança demonstra qualquer mudança de comportamento ao som do sino?”",
@@ -11,6 +12,7 @@
         "diaFinal": 15
     },
     {
+        "id": 1,
         "key": "Vocaliza",
         "descricao": "Observe se a criança emite algum som curto de vogal, que não seja choro.\nExemplo: Eh, Uh..",
         "pergunta": "“A criança produz sons curtos de vogais?”",
@@ -22,6 +24,7 @@
         "diaFinal": 30
     },
     {
+        "id": 2,
         "key": "Fala Ooh/Aah",
         "descricao": "Observe se a criança produz som prolongado de vogais.\nExemplo: Oooooh, Aaaaaaah..",
         "pergunta": "“A criança emite sons prolongados de vogais?”",
@@ -33,6 +36,7 @@
         "diaFinal": 81
     },
     {
+        "id": 3,
         "key": "Ri",
         "descricao": "Observe se a criança ri, emitindo som.\nExemplo: Gargalhada.",
         "pergunta": "“A criança ri emitindo som?”",
@@ -44,6 +48,7 @@
         "diaFinal": 94
     },
     {
+        "id": 4,
         "key": "Grita",
         "descricao": "Observe se a criança emite sons agudos.\nExemplo: Gritos agudos de felicidade.",
         "pergunta": "“A criança produz som agudo?”",
@@ -55,6 +60,7 @@
         "diaFinal": 127
     },
     {
+        "id": 5,
         "key": "Volta-se Para o Som",
         "descricao": "Fique atrás da criança enquanto ela está sentada. Coloque um cubo na caneca e segure-a com sua mão cobrindo a abertura. Cuidadosamente, aproxime a caneca (15 a 30 cm) da orelha da criança. Balance suavemente a caneca para produzir um som fraco. (Testar de ambos os lados.)",
         "pergunta": "“A criança volta a cabeça para o som, dos lados direito e esquerdo?”",
@@ -66,6 +72,7 @@
         "diaFinal": 168
     },
     {
+        "id": 6,
         "key": "Volta-se Para a Voz",
         "descricao": "Com a criança de costas, sentada, posicione-se atrás da criança (entre 20 a 30 cm). Coloque sua mão entre sua boca e a orelha da criança, de maneira que ela responda para o som e não para a 'vibração do ar'. Chame-a pelo seu nome algumas vezes.",
         "pergunta": "“A criança responde, voltando a cabeça para a voz, dos lados direito e esquerdo?”",
@@ -77,6 +84,7 @@
         "diaFinal": 205
     },
     {
+        "id": 7,
         "key": "Fala Sílabas Isoladas",
         "descricao": "Observe se a criança usa combinações consoante + vogal.\nExemplo: 'Ba, De, Ga, Mi'",
         "pergunta": "“A criança produz sílabas isoladas durante o teste?",
@@ -88,6 +96,7 @@
         "diaFinal": 217
     },
     {
+        "id": 8,
         "key": "Imita Sons",
         "descricao": "Emita um som, como por exemplo: Estalar a língua, tossir, beijar etc, várias vezes. Observe se a criança imita. O som deve ser iniciado por outra pessoa, e não pela criança.",
         "pergunta": "“A criança imita o som realizado pelo profissional?”",
@@ -99,6 +108,7 @@
         "diaFinal": 267
     },
     {
+        "id": 9,
         "key": "Mama/papa Não Específicos",
         "descricao": "A criança fala “papa” “dada” ou “mama” durante o teste? As palavras não precisam se referir especificamente ao pai ou a mãe.",
         "pergunta": "“A criança fala 'dada, papa ou mama'?",
@@ -110,6 +120,7 @@
         "diaFinal": 273
     },
     {
+        "id": 10,
         "key": "Combina Silabas",
         "descricao": "A criança repete a mesma sílaba 3 vezes ou mais.\nExemplo: “dadadada” ou “gagagaga”.",
         "pergunta": "“A criança produz som de sílabas repetidas?”",
@@ -121,6 +132,7 @@
         "diaFinal": 300
     },
     {
+        "id": 11,
         "key": "Fala Incompreensível",
         "descricao": "A criança produz uma conversação incompreensível consigo mesma usando tons distintos e pausas (padrões de voz variam e poucas ou nenhuma palavra se entende parecido com um idioma estrangeiro).",
         "pergunta": "“A criança fala de forma incompreensível?”",
@@ -132,6 +144,7 @@
         "diaFinal": 363
     },
     {
+        "id": 12,
         "key": "Mama/papa Específico",
         "descricao": "Observe se a criança fala “papa/papai” ou “mama/mamãe”, referindo-se ao pai ou à mãe.",
         "pergunta": "“A criança fala “papa/papai” ou “mama/mamãe” com significado de pai/mãe?”",
@@ -143,6 +156,7 @@
         "diaFinal": 397
     },
     {
+        "id": 13,
         "key": "Fala 1 Palavra",
         "descricao": "Pergunte aos responsáveis quantas palavras a criança fala e quais são.",
         "pergunta": "“A criança já fala 1 palavra?”",
@@ -154,6 +168,7 @@
         "diaFinal": 453
     },
     {
+        "id": 14,
         "key": "Fala 2 Palavras",
         "descricao": "Pergunte aos responsáveis quantas palavras a criança fala e quais são.",
         "pergunta": "“A criança já fala 2 palavras?”",
@@ -165,6 +180,7 @@
         "diaFinal": 495
     },
     {
+        "id": 15,
         "key": "Fala 3 Palavras",
         "descricao": "Pergunte aos responsáveis quantas palavras a criança fala e quais são.",
         "pergunta": "“A criança já fala 3 palavras?”",
@@ -176,6 +192,7 @@
         "diaFinal": 544
     },
     {
+        "id": 16,
         "key": "Fala 6 Palavras",
         "descricao": "Pergunte aos responsáveis quantas palavras a criança fala e quais são.",
         "pergunta": "“A criança já fala 6 palavras?”",
@@ -187,6 +204,7 @@
         "diaFinal": 651
     },
     {
+        "id": 17,
         "key": "Aponta 2 Figuras",
         "descricao": "Primeiro aponte uma figura por vez e peça que a criança nomeie.\nPergunte: “O que é isto?”\nSe a criança nomear pelo menos uma figura, prossiga.\nMostre à criança as figuras que estão na tela (com zoom). Peça para que aponte uma de cada vez, e aguarde a resposta da criança antes de seguir para a próxima: passarinho - homem -cachorro (au-au) - gato - cavalo.",
         "pergunta": "“A criança aponta corretamente ou nomeia no mínimo 2 (duas) figuras?”",

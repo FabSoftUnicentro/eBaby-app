@@ -1,5 +1,6 @@
 [
     {
+        "id": 18,
         "key": "Segue Até a Linha Média",
         "descricao": "Posicione a criança deitada, segure o pompom vermelho acima do rosto dela, onde ela possa vê-lo (entre 20 a 30cm). Balance o pompom para atrair a atenção da criança e depois mova-o de um lado ao outro (arco de 180º) várias vezes.",
         "pergunta": "“A criança acompanha o pompom até a linha média, somente com os olhos ou com os olhos e a cabeça?",
@@ -11,6 +12,7 @@
         "diaFinal": 39
     },
     {
+        "id": 19,
         "key": "Segue Além da Linha Média",
         "descricao": "Posicione a criança deitada, segure o pompom vermelho acima do rosto dela, onde ela possa vê-lo (entre 20 a 30cm). Balance o pompom para atrair a atenção da criança e depois mova-o de um lado ao outro (arco de 180º) várias vezes.",
         "pergunta": "“A criança acompanha o pompom passando a linha média, somente com os olhos ou com os olhos e a cabeça?",
@@ -22,6 +24,7 @@
         "diaFinal": 84
     },
     {
+        "id": 20,
         "key": "Segura o Chocalho",
         "descricao": "Posicione a criança deitada de costas ou no colo do responsável, encoste o cabo do chocalho na parte de trás das mãos ou na ponta dos dedos da criança e aguarde:",
         "pergunta": "“A criança segura o chocalho por alguns segundos?”",
@@ -33,6 +36,7 @@
         "diaFinal": 117
     },
     {
+        "id": 21,
         "key": "Junta as Mãos",
         "descricao": "Posicione a criança deitada de costas, observe se ela junta as mãos, levando-as até a linha média do corpo (acima da região do peito ou da boca).",
         "pergunta": "“A criança junta as mãos desta forma?”",
@@ -44,6 +48,7 @@
         "diaFinal": 120
     },
     {
+        "id": 22,
         "key": "Segue Até 180°",
         "descricao": "Posicione a criança deitada, segure o pompom vermelho acima do rosto dela, onde ela possa vê-lo (entre 20 a 30cm). Balance o pompom para atrair a atenção da criança e depois mova-o de um lado ao outro (arco de 180º) várias vezes.",
         "pergunta": "“A criança acompanha o pompom com a cabeça e os olhos, formando um arco completo?”",
@@ -55,6 +60,7 @@
         "diaFinal": 135
     },
     {
+        "id": 23,
         "key": "Olha Para Um Objeto Pequeno",
         "descricao": "Posicione a criança sentada à mesa, no colo de um dos responsáveis, coloque um objeto pequeno em frente a ela sobre uma superfície que ofereça um bom contraste. Você pode apontar ou tocar, atraindo a atenção da criança para o objeto.",
         "pergunta": "“A criança olha o objeto de forma evidente?”",
@@ -66,6 +72,7 @@
         "diaFinal": 156
     },
     {
+        "id": 24,
         "key": "Tenta Alcançar Um Objeto",
         "descricao": "Posicione a criança sentada à mesa, no colo de um dos responsáveis. Coloque um objeto (chocalho ou pompom vermelho) sobre a mesa, ao alcance fácil da criança e encoraje-a a pegá-lo.",
         "pergunta": "“A criança tenta alcançar ou pelo menos move suas mãos e/ou braços em direção ao objeto?”",
@@ -77,6 +84,7 @@
         "diaFinal": 168
     },
     {
+        "id": 25,
         "key": "Procura o Pompom ",
         "descricao": "Posicione a criança sentada no colo do responsável, segure o pompom vermelho (acima dos olhos dela) e chame sua atenção. Quando ela estiver olhando, deixe cair o pompom de forma sútil. Se necessário repita o procedimento.",
         "pergunta": "“A criança, de forma conclusiva, procura o pompom olhando para baixo ou para o chão?”",
@@ -88,6 +96,7 @@
         "diaFinal": 216
     },
     {
+        "id": 26,
         "key": "Pega Objeto Pequeno ",
         "descricao": "Posicione a criança sentada à mesa, no colo do responsável (cotovelos da criança em nível com a superfície da mesa). Deixe cair um objeto pequeno sobre a mesa, ao alcance fácil dela. Se necessário, aponte ou toque no objeto para atrair a atenção.",
         "pergunta": "“A criança pega o objeto usando movimento de “garra” com todos os dedos das mãos?”\nCertifique-se de que o objeto foi realmente pego.",
@@ -99,6 +108,7 @@
         "diaFinal": 219
     },
     {
+        "id": 27,
         "key": "Transfere O Cubo De Uma Mão Para Outra",
         "descricao": "Observe se a criança passa o cubo de uma mão para outra. Como estímulo, dê um cubo para a criança e ofereça-a um segundo cubo na direção da mão já ocupada, a fim de motivá-la a executar a ação.",
         "pergunta": "“A criança transfere o cubo de uma mão para a outra?”",
@@ -110,6 +120,7 @@
         "diaFinal": 231
     },
     {
+        "id": 28,
         "key": "Pega Dois Cubos",
         "descricao": "Coloque dois cubos sobre a mesa, em frente à criança. Encoraje-a a pegar os cubos, mas não os entregue a ela.",
         "pergunta": "“A criança pega os dois cubos e segura simultaneamente um em cada mão?”",
@@ -121,6 +132,7 @@
         "diaFinal": 273
     },
     {
+        "id": 29,
         "key": "Pinça Polegar/Dedo",
         "descricao": "Posicione a criança sentada à mesa, no colo do responsável (cotovelos da criança em nível com a superfície da mesa). Deixe cair um objeto pequeno sobre a mesa, em frente à criança e ao alcance fácil dela. Se necessário aponte ou toque no objeto, para atrair a atenção da criança",
         "pergunta": "“A criança pega o objeto pequeno, usando o movimento de pinça?",
@@ -132,6 +144,7 @@
         "diaFinal": 306
     },
     {
+        "id": 30,
         "key": "Bate Dois Cubos nas Mãos",
         "descricao": "Coloque um cubo em cada uma das mãos da criança e estimule-a a bater os cubos um contra o outro. Você pode demonstrar com outros cubos, mas não pode tocar nas mãos ou braços da criança.",
         "pergunta": "“A criança segura um cubo em cada mão e bate um contra o outro?”",
@@ -143,6 +156,7 @@
         "diaFinal": 327
     },
     {
+        "id": 31,
         "key": "Coloca o Cubo na Caneca",
         "descricao": "Coloque 3 cubos e uma caneca sobre a mesa, em frente à criança. Estimule-a a colocar os cubos dentro da caneca por meio de demonstração e fala. A demonstração pode ser repetida algumas vezes.",
         "pergunta": "“A criança coloca ao menos um cubo dentro da caneca e solta?” ",
@@ -154,6 +168,7 @@
         "diaFinal": 414
     },
     {
+        "id": 32,
         "key": "Rabisca",
         "descricao": "Coloque uma folha de papel (sem linhas) e um lápis sobre a mesa. Você pode colocar o lápis na mão da criança e estimulá-la a rabiscar, mas não demonstrar.",
         "pergunta": "“A criança faz rabiscos sobre o papel espontaneamente?”",
@@ -165,6 +180,7 @@
         "diaFinal": 489
     },
     {
+        "id": 33,
         "key": "Retira Objeto Pequeno do Frasco – Demonstrar",
         "descricao": "Demonstre (2 ou 3 vezes) como retirar um objeto pequeno do frasco, virando-o de cabeça para baixo. Depois, peça a criança para executar a tarefa. Não use a palavra “tire”.",
         "pergunta": "“A criança vira de cabeça para baixo o frasco para retirar o objeto?”",
@@ -176,6 +192,7 @@
         "diaFinal": 582
     },
     {
+        "id": 34,
         "key": "Empilha 2 Cubos",
         "descricao": "Posicione a criança sentada à mesa (cotovelos da criança em nível com a superfície da mesa). Estimule-a a empilhar os cubos, por meio de demonstração e fala. Pode ser necessário segurar os cubos para a criança, um de cada vez.",
         "pergunta": "“A criança coloca um cubo sobre o outro e ele não cai quando ela retira a mão?”",
@@ -187,6 +204,7 @@
         "diaFinal": 618
     },
     {
+        "id": 35,
         "key": "Empilha 4 Cubos",
         "descricao": "Posicione a criança sentada à mesa (os cotovelos da criança em nível com a superfície da mesa). Estimule-a a empilhar os cubos, por meio de demonstração e fala. Pode ser necessário segurar os cubos para a criança, um de cada vez",
         "pergunta": "“A criança empilha 4 cubos e eles não caem quando ela retira a mão?”",
