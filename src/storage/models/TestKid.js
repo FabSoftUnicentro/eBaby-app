@@ -6,7 +6,7 @@ Itens.schema = {
   name: 'Itens',
   properties: {
     name: 'string',
-    result: 'string',
+    result: 'bool',
   },
 };
 
