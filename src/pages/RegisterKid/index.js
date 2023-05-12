@@ -282,7 +282,7 @@ const RegisterKid = ({navigation}) => {
                 {
                   cpf,
                   name,
-                  birthAge,
+                  birthAge: moment(birthAge, 'DD/MM/YYYY').format('MM/DD/YYYY'),
                   gestationalAge,
                   sex,
                 },
