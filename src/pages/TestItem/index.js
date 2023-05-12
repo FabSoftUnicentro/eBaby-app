@@ -21,11 +21,11 @@ const TestKid = require('../../storage/controllers/TestKidController');
 export function navigationOptions({navigation}) {
   var disableHeaderButton = false;
   function updateTestKid(result) {
-    var a = TestKid.update({
+    TestKid.update({
+      id: navigation.state.params.id,
       name: navigation.state.params.key,
       result: result,
     });
-    console.log(a);
     const resetAction = routeName =>
       StackActions.reset({
         index: 0,
@@ -105,6 +105,7 @@ const TestItem = props => {
 
   function updateTestKid(result) {
     TestKid.update({
+      id: props.navigation.state.params.id,
       name: props.navigation.state.params.key,
       result: result,
     });
