@@ -1,17 +1,19 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Alert,
-  ToastAndroid,
-} from 'react-native';
-import OrangeButton from '../../components/OrangeButton';
 import NetInfo from '@react-native-community/netinfo';
+import React, {useEffect, useState} from 'react';
+import {
+  Alert,
+  ScrollView,
+  Text,
+  ToastAndroid,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
+import OrangeButton from '../../components/OrangeButton';
 import api from '../../services/api';
+
 const TestKid = require('../../storage/controllers/TestKidController');
 import styles from './styles';
 const Kid = require('../../storage/controllers/KidController');
@@ -33,7 +35,7 @@ const Item = ({name}) => {
   );
 };
 
-const Historic = props => {
+const Historic = (props) => {
   const [dataArray, setDataArray] = useState([]);
   const [isDisable, setIsDisable] = useState(false);
 
@@ -69,11 +71,11 @@ const Historic = props => {
       });
 
       body = JSON.parse(body);
-      NetInfo.fetch().then(state => {
+      NetInfo.fetch().then((state) => {
         if (state.isInternetReachable) {
           api
             .post('/registerKid', body, {timeout: 10000})
-            .then(res => {
+            .then((res) => {
               if (res.data.success === true) {
                 Kid.destroy(kid);
                 TestKid.destroy(testkid);
@@ -93,7 +95,7 @@ const Historic = props => {
                 setIsDisable(false);
               }
             })
-            .catch(res => {
+            .catch((res) => {
               Alert.alert(
                 'Não foi possivel estabelecer conexao com o servidor!',
                 'Tente os envios dos dados mais tarde',
@@ -128,24 +130,36 @@ const Historic = props => {
     <LinearGradient
       start={{x: 0, y: 0}}
       colors={['#c0dfdf', '#ACD2EA', '#5aabab']}
-      style={{flex: 1}}>
+      style={{flex: 1}}
+    >
       {JSON.stringify(dataArray) !== JSON.stringify([]) ? (
         <>
-        <ScrollView>
-        {dataArray.map(item => (
-          <Item key={item.cpfKid} name={getKidName(item.cpfKid)} />
-        ))}
-        </ScrollView>
-        <View style={{height: 68, justifyContent: 'center', paddingHorizontal: '5%'}}>
-          <OrangeButton
-            onClick={() => handleSendAll()}
-            buttonText={'ENVIAR TODOS'}
-            disabled={isDisable}
-          />
-        </View>
+          <ScrollView>
+            {dataArray.map((item) => (
+              <Item key={item.cpfKid} name={getKidName(item.cpfKid)} />
+            ))}
+          </ScrollView>
+          <View
+            style={{
+              height: 68,
+              justifyContent: 'center',
+              paddingHorizontal: '5%',
+            }}
+          >
+            <OrangeButton
+              onClick={() => handleSendAll()}
+              buttonText={'ENVIAR TODOS'}
+              disabled={isDisable}
+            />
+          </View>
         </>
-      ) : <View style={styles.withoutTestView}><Text style={styles.textAlert}>Voce nao tem nenhum teste com envio pendente</Text></View>}
-      
+      ) : (
+        <View style={styles.withoutTestView}>
+          <Text style={styles.textAlert}>
+            Voce nao tem nenhum teste com envio pendente
+          </Text>
+        </View>
+      )}
     </LinearGradient>
   );
 };
