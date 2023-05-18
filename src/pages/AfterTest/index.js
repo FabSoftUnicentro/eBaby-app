@@ -1,24 +1,27 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect} from 'react';
+import NetInfo from '@react-native-community/netinfo';
+import React, {useEffect, useState} from 'react';
 import {
-  View,
+  Alert,
+  ScrollView,
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-  Alert,
+  View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {StackActions, NavigationActions} from 'react-navigation';
-import NetInfo from '@react-native-community/netinfo';
-import styles from './styles';
+import {NavigationActions, StackActions} from 'react-navigation';
+
 import api from '../../services/api';
+
+import styles from './styles';
+
 const Kid = require('../../storage/controllers/KidController');
 const TestKid = require('../../storage/controllers/TestKidController');
 const Agent = require('../../storage/controllers/AgentController');
 
-const LabelName = props => {
+const LabelName = (props) => {
   return (
     <View style={styles.label}>
       <Icon name={props.iconName} size={32} color={'#000'} />
@@ -27,7 +30,7 @@ const LabelName = props => {
   );
 };
 
-const AfterTest = props => {
+const AfterTest = (props) => {
   const [name, setName] = useState('');
   const [birthAge, setBirthAge] = useState('');
   const [weight, setWeight] = useState('');
@@ -63,23 +66,23 @@ const AfterTest = props => {
       if (kid.sex === 'M') {
         setLengthList(
           require('../../assets/growth/AlturaMasculino.json').filter(
-            obj => obj.mes === month,
+            (obj) => obj.mes === month,
           ),
         );
         setWeightList(
           require('../../assets/growth/PesoMasculino.json').filter(
-            obj => obj.mes === month,
+            (obj) => obj.mes === month,
           ),
         );
       } else {
         setLengthList(
           require('../../assets/growth/AlturaFeminino.json').filter(
-            obj => obj.mes === month,
+            (obj) => obj.mes === month,
           ),
         );
         setWeightList(
           require('../../assets/growth/PesoFeminino.json').filter(
-            obj => obj.mes === month,
+            (obj) => obj.mes === month,
           ),
         );
       }
@@ -145,7 +148,7 @@ const AfterTest = props => {
     return <LabelName iconName={iconName} text={text} />;
   }
 
-  const resetAction = routeName =>
+  const resetAction = (routeName) =>
     StackActions.reset({
       index: 0,
       actions: [NavigationActions.navigate({routeName: routeName})],
@@ -173,19 +176,19 @@ const AfterTest = props => {
     });
     body = JSON.parse(body);
     if (ok === true) {
-      NetInfo.fetch().then(state => {
+      NetInfo.fetch().then((state) => {
         if (state.isInternetReachable) {
           api
             .post('/registerKid', body, {timeout: 10000})
-            .then(res => {
+            .then((res) => {
               if (res.data.success === true) {
                 Kid.destroy(kid);
                 TestKid.destroy(testkid);
                 props.navigation.navigate('AuthAfterTest', {
-                    status: require('../../assets/animations/success.json'),
-                    alertTitle: 'Muito bem!',
-                    alertContent: 'Seu teste foi enviado com sucesso!',
-                    nextRoute: 'Home',
+                  status: require('../../assets/animations/success.json'),
+                  alertTitle: 'Muito bem!',
+                  alertContent: 'Seu teste foi enviado com sucesso!',
+                  nextRoute: 'Home',
                 });
               } else {
                 props.navigation.navigate('AuthAfterTest', {
@@ -196,10 +199,11 @@ const AfterTest = props => {
                 });
               }
             })
-            .catch(res => {
+            .catch((res) => {
               props.navigation.navigate('AuthAfterTest', {
                 status: require('../../assets/animations/fail.json'),
-                alertTitle: 'Não foi possivel estabelecer conexao com o servidor!',
+                alertTitle:
+                  'Não foi possivel estabelecer conexao com o servidor!',
                 alertContent: 'Tente o envio dos dados mais tarde',
                 nextRoute: 'Home',
               });
@@ -208,7 +212,8 @@ const AfterTest = props => {
           props.navigation.navigate('AuthAfterTest', {
             status: require('../../assets/animations/fail.json'),
             alertTitle: 'Parece que você está sem conexão!',
-            alertContent: 'Faça o envio dos dados quando estiver conectado a internet',
+            alertContent:
+              'Faça o envio dos dados quando estiver conectado a internet',
             nextRoute: 'Home',
           });
         }
@@ -237,7 +242,10 @@ const AfterTest = props => {
     <LinearGradient
       start={{x: 0, y: 0}}
       colors={['#c0dfdf', '#ACD2EA', '#5aabab']}
-      style={{flex: 1}}>
+      style={{
+        flex: 1,
+      }}
+    >
       <ScrollView style={styles.container}>
         <View style={styles.info}>
           <Text style={styles.topicName}>Informações da criança</Text>
@@ -262,14 +270,15 @@ const AfterTest = props => {
             style={styles.input}
             placeholderTextColor={'#505050'}
             value={obs}
-            onChangeText={ob => setObs(ob)}
+            onChangeText={(ob) => setObs(ob)}
           />
         </View>
         <View style={styles.finalize}>
           <TouchableOpacity
             style={styles.btnFinalize}
             disabled={isDisable}
-            onPress={() => finalizeTest(obs)}>
+            onPress={() => finalizeTest(obs)}
+          >
             <Text style={styles.txtbtnFinalize}>Finalizar</Text>
           </TouchableOpacity>
         </View>
@@ -277,5 +286,4 @@ const AfterTest = props => {
     </LinearGradient>
   );
 };
-
 export default AfterTest;
