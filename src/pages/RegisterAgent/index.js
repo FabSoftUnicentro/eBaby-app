@@ -35,14 +35,11 @@ const RegisterAgent = ({navigation}) => {
 
   useEffect(() => {
     if (loading) {
-      console.log("loading");
       Animated.timing(progress, {
         toValue: 1,
         duration: 2000,
         easing: Easing.linear,
-      }).start(() => {
-          navigation.navigate('Login');
-      });
+      }).start();
     }
   }, [loading]);
 
@@ -152,6 +149,7 @@ const RegisterAgent = ({navigation}) => {
           api
             .post('/register', body, {timeout: 10000})
             .then(res => {
+              setLoading(false);
               if (res.data.success === true) {
                 Alert.alert(
                   'Seu cadastro foi enviado',
@@ -159,17 +157,20 @@ const RegisterAgent = ({navigation}) => {
                   [{text: 'OK', onPress: () => {}}],
                   {cancelable: false},
                 );
-                setLoading(false);
-                console.log(res);
               } else {
-                console.log(res);
+                setLoading(false);
                 ToastAndroid.show(res.data.message, ToastAndroid.LONG);
               }
             })
             .catch(res => {
-              console.log(res);
               setLoading(false);
               setIsDisable(false);
+              Alert.alert(
+                'Algum erro aconteceu',
+                'Infelizmente seu cadastro não foi realizado devido a um erro. Por favor, tente novamente',
+                [{text: 'OK', onPress: () => {}}],
+                {cancelable: false},
+              );
             });
         } else {
           setIsDisable(false);
