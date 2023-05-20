@@ -1,13 +1,15 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable radix */
 /* eslint-disable no-shadow */
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   ScrollView,
   TextInput,
   View,
   TouchableOpacity,
   ToastAndroid,
+  Animated,
+  Easing,
   Alert,
 } from 'react-native';
 import styles from './styles';
@@ -15,11 +17,14 @@ import {TextInputMask} from 'react-native-masked-text';
 import OrangeButton from '../../components/OrangeButton';
 import Icon from 'react-native-vector-icons/Ionicons';
 import NetInfo from '@react-native-community/netinfo';
-import LinearGradient from 'react-native-linear-gradient'
+import LinearGradient from 'react-native-linear-gradient';
+import LottieView from 'lottie-react-native';
 import api from '../../services/api';
 
 const RegisterAgent = ({navigation}) => {
   const [name, setName] = useState('');
+  const [progress, setProgress] = useState(new Animated.Value(0));
+  const [loading, setLoading] = useState(false);
   const [isDisable, setIsDisable] = useState(false);
   const [cpf, setCpf] = useState('');
   const [cell, setCell] = useState('');
@@ -27,6 +32,16 @@ const RegisterAgent = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [confirmPass, setConfirmPass] = useState('');
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (loading) {
+      Animated.timing(progress, {
+        toValue: 1,
+        duration: 2000,
+        easing: Easing.linear,
+      }).start();
+    }
+  }, [loading]);
 
   function validate() {
     var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -125,15 +140,17 @@ const RegisterAgent = ({navigation}) => {
   }
 
   const register = async (body) => {
+    setProgress(new Animated.Value(0));
     setIsDisable(true);
     NetInfo.fetch().then(state => {
       if (state.isInternetReachable) {
+        setLoading(true);
         if (validate()) {
           api
             .post('/register', body, {timeout: 10000})
             .then(res => {
+              setLoading(false);
               if (res.data.success === true) {
-                navigation.navigate('Login');
                 Alert.alert(
                   'Seu cadastro foi enviado',
                   'Para realizar o login o cadastro tem que ser aprovado por um administrador',
@@ -141,11 +158,19 @@ const RegisterAgent = ({navigation}) => {
                   {cancelable: false},
                 );
               } else {
+                setLoading(false);
                 ToastAndroid.show(res.data.message, ToastAndroid.LONG);
               }
             })
             .catch(res => {
+              setLoading(false);
               setIsDisable(false);
+              Alert.alert(
+                'Algum erro aconteceu',
+                'Infelizmente seu cadastro não foi realizado devido a um erro. Por favor, tente novamente',
+                [{text: 'OK', onPress: () => {}}],
+                {cancelable: false},
+              );
             });
         } else {
           setIsDisable(false);
@@ -234,6 +259,7 @@ const RegisterAgent = ({navigation}) => {
         onClick={() => register({cpf, name, cellphone: cell, email, password})}
       />
     </ScrollView>
+    {loading ? <LottieView source={require('../../assets/animations/loading.json')} progress={progress} loop={true} autoPlay={true}/> : null}
     </LinearGradient>
   );
 };

@@ -5,8 +5,9 @@ class Itens {}
 Itens.schema = {
   name: 'Itens',
   properties: {
+    id: 'int',
     name: 'string',
-    result: 'string',
+    result: 'bool',
   },
 };
 
