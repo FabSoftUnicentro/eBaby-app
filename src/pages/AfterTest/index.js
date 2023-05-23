@@ -7,11 +7,13 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  Animated,
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {NavigationActions, StackActions} from 'react-navigation';
+import LottieView from 'lottie-react-native';
 
 import api from '../../services/api';
 
@@ -32,6 +34,8 @@ const LabelName = (props) => {
 
 const AfterTest = (props) => {
   const [name, setName] = useState('');
+  const [progress, setProgress] = useState(new Animated.Value(0));
+  const [loading, setLoading] = useState(false);
   const [birthAge, setBirthAge] = useState('');
   const [weight, setWeight] = useState('');
   const [length, setLength] = useState('');
@@ -94,6 +98,14 @@ const AfterTest = (props) => {
       } else {
         return `${month}m`;
       }
+    }
+
+    if (loading) {
+      Animated.timing(progress, {
+        toValue: 1,
+        duration: 2000,
+        easing: Easing.linear,
+      }).start();
     }
 
     setName(kid.name);
@@ -176,8 +188,11 @@ const AfterTest = (props) => {
     });
     body = JSON.parse(body);
     if (ok === true) {
+      setProgress(new Animated.Value(0));
+      setIsDisable(true);
       NetInfo.fetch().then((state) => {
         if (state.isInternetReachable) {
+          setLoading(true);
           api
             .post('/registerKid', body, {timeout: 10000})
             .then((res) => {
@@ -198,6 +213,7 @@ const AfterTest = (props) => {
                   nextRoute: 'Home',
                 });
               }
+              setLoading(false);
             })
             .catch((res) => {
               props.navigation.navigate('AuthAfterTest', {
@@ -207,6 +223,7 @@ const AfterTest = (props) => {
                 alertContent: 'Tente o envio dos dados mais tarde',
                 nextRoute: 'Home',
               });
+              setLoading(false);
             });
         } else {
           props.navigation.navigate('AuthAfterTest', {
@@ -283,6 +300,7 @@ const AfterTest = (props) => {
           </TouchableOpacity>
         </View>
       </ScrollView>
+      {loading ? <LottieView source={require('../../assets/animations/loading.json')} progress={progress} loop={true} autoPlay={true}/> : null}
     </LinearGradient>
   );
 };
