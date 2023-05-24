@@ -120,10 +120,7 @@ const Test = ({navigation}) => {
   useEffect(() => {
     // eslint-disable-next-line no-shadow
     const {name, birthAge, gestationalAge} = Kid.show();
-    const birthAgeSplited = birthAge.split('/');
-    const date1 = new Date(
-      `${birthAgeSplited[2]}/${birthAgeSplited[1]}/${birthAgeSplited[0]}`,
-    );
+    const date1 = new Date(birthAge);
     const date2 = new Date();
     const diffDays = getDiffDays(date1, date2);
 

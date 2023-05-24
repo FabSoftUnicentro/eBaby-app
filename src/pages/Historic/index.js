@@ -7,9 +7,11 @@ import {
   Text,
   ToastAndroid,
   TouchableOpacity,
+  Animated,
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import LottieView from 'lottie-react-native';
 
 import OrangeButton from '../../components/OrangeButton';
 import api from '../../services/api';
@@ -38,10 +40,20 @@ const Item = ({name}) => {
 const Historic = (props) => {
   const [dataArray, setDataArray] = useState([]);
   const [isDisable, setIsDisable] = useState(false);
+  const [progress, setProgress] = useState(new Animated.Value(0));
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const tk = TestKid.index();
     setDataArray(Array.from(tk));
+
+    if (loading) {
+      Animated.timing(progress, {
+        toValue: 1,
+        duration: 2000,
+        easing: Easing.linear,
+      }).start();
+    }
   }, []);
 
   function getKidName(cpf) {
@@ -71,8 +83,12 @@ const Historic = (props) => {
       });
 
       body = JSON.parse(body);
+
+      setProgress(new Animated.Value(0));
+      setIsDisable(true);
       NetInfo.fetch().then((state) => {
         if (state.isInternetReachable) {
+          setLoading(true);
           api
             .post('/registerKid', body, {timeout: 10000})
             .then((res) => {
@@ -92,6 +108,7 @@ const Historic = (props) => {
                   [{text: 'OK', onPress: () => {}}],
                   {cancelable: false},
                 );
+                setLoading(false);
                 setIsDisable(false);
               }
             })
@@ -102,6 +119,7 @@ const Historic = (props) => {
                 [{text: 'OK', onPress: () => {}}],
                 {cancelable: false},
               );
+              setLoading(false);
               setIsDisable(false);
             });
         } else {
@@ -156,10 +174,11 @@ const Historic = (props) => {
       ) : (
         <View style={styles.withoutTestView}>
           <Text style={styles.textAlert}>
-            Voce nao tem nenhum teste com envio pendente
+            Voce não tem nenhum teste com envio pendente
           </Text>
         </View>
       )}
+      {loading ? <LottieView source={require('../../assets/animations/loading.json')} progress={progress} loop={true} autoPlay={true}/> : null}
     </LinearGradient>
   );
 };

@@ -17,7 +17,7 @@ const AuthLogOut = ({navigation}) => {
 
   return (
     <LottieView
-      source={require('../assets/animations/logout.json')}
+      source={require('../assets/animations/loading.json')}
       progress={progress}
     />
   );
