@@ -47,16 +47,13 @@ const AfterTest = (props) => {
   useEffect(() => {
     const kid = Kid.show();
     const testkid = TestKid.show();
-    const birthAgeSplited = kid.birthAge.split('/');
-    const date1 = new Date(
-      `${birthAgeSplited[2]}/${birthAgeSplited[1]}/${birthAgeSplited[0]}`,
-    );
+    const date1 = new Date(kid.birthAge);
     const date2 = new Date();
     const diffDays = getDiffDays(date1, date2);
 
     function getDiffDays(dateA, dateB) {
       return Math.ceil(
-        Math.abs(dateA.getTime() - dateB.getTime()) / (1000 * 3600 * 24),
+        Math.abs(dateB.getTime() - dateA.getTime()) / (1000 * 3600 * 24),
       );
     }
 
