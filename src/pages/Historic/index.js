@@ -174,7 +174,7 @@ const Historic = (props) => {
       ) : (
         <View style={styles.withoutTestView}>
           <Text style={styles.textAlert}>
-            Voce nao tem nenhum teste com envio pendente
+            Voce não tem nenhum teste com envio pendente
           </Text>
         </View>
       )}
