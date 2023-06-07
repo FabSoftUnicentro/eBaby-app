@@ -1,56 +1,54 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
-  View,
   Dimensions,
   Image,
+  ScrollView,
   Text,
   TouchableOpacity,
-  ScrollView,
+  View,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/Ionicons';
-import styles from './styles';
-import BoldText from '../../components/BoldText';
 import ImageZoom from 'react-native-image-pan-zoom';
-import images from '../../assets/images';
+import LinearGradient from 'react-native-linear-gradient';
 import {RFPercentage} from 'react-native-responsive-fontsize';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {NavigationActions, StackActions} from 'react-navigation';
+
+import images from '../../assets/images';
+import BoldText from '../../components/BoldText';
+
+import styles from './styles';
+
 const TestKid = require('../../storage/controllers/TestKidController');
 
 export function navigationOptions({navigation}) {
   var disableHeaderButton = false;
   function updateTestKid(result) {
     TestKid.update({
-      id: navigation.state.params.id,
-      name: navigation.state.params.key,
-      result: result,
+      id : navigation.state.params.id,
+      name : navigation.state.params.key,
+      result : result,
     });
-    const resetAction = routeName =>
-      StackActions.reset({
-        index: 0,
-        actions: [NavigationActions.navigate({routeName: routeName})],
-      });
+    const resetAction = routeName => StackActions.reset({
+      index : 0,
+      actions : [ NavigationActions.navigate({routeName : routeName}) ],
+    });
     navigation.dispatch(resetAction('Test'));
   }
 
   return {
     headerRight: () => (
       <TouchableOpacity
-        style={styles.buttonNoOP}
-        disabled={disableHeaderButton}
-        onPress={() => {
-          disableHeaderButton = true;
-          updateTestKid(2);
-        }}>
-        <Text
-          style={{
-            fontSize: 14,
-            fontWeight: 'normal',
-            marginRight: 5,
-          }}>
-          Sem Oportunidade
-        </Text>
+  style = {styles.buttonNoOP} disabled = {disableHeaderButton} onPress = {
+    () => {
+      disableHeaderButton = true;
+      updateTestKid(2);
+    }
+  } > < Text
+  style =
+      {{ fontSize: 14, fontWeight: 'normal', marginRight: 5, }} >
+      Sem Oportunidade<
+          /Text>
         <Icon name={'ios-close'} size={28} color={'#6e7075'} />
       </TouchableOpacity>
     ),
@@ -127,8 +125,7 @@ const TestItem = props => {
       colors={['#c0dfdf', '#ACD2EA', '#5aabab']}
       style={styles.container}>
       <View style={{flex: 4}}>
-        <BoldText text={title} />
-        <ImageZoom
+        <BoldText text={title} />< ImageZoom
           cropWidth={width * 0.9}
           cropHeight={height * 0.35}
           imageWidth={width * 0.9}
@@ -136,7 +133,9 @@ const TestItem = props => {
           minScale={0.9}
           maxScale={4}
           style={styles.imageView}>
-          <Image source={{uri: image}} style={styles.image} />
+          <Image source={
+    { uri: image }} style={
+    styles.image} />
         </ImageZoom>
       </View>
       <View style={{flex: 4, top: 10}}>
@@ -182,20 +181,20 @@ const TestItem = props => {
       </View>
       <View style={styles.horizontalView}>
         <TouchableOpacity
-          style={styles.buttonFail}
-          disabled={isDisable}
-          onPress={() => {
-            setIsDisable(true);
-            updateTestKid(0);
-          }}>
-          <Text style={styles.buttonText}>Não</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+          style = {styles.buttonFail} disabled = {isDisable} onPress =
+              {
+                () => {
+                  setIsDisable(true);
+                  updateTestKid(0);
+                }
+              } > <Text style = {styles.buttonText}>
+                      Não</Text>
+        </TouchableOpacity>< TouchableOpacity
           style={styles.buttonOK}
           disabled={isDisable}
           onPress={() => {
-            setIsDisable(true);
-            updateTestKid(1);
+    setIsDisable(true);
+    updateTestKid(1);
           }}>
           <Text style={styles.buttonText}>Sim</Text>
         </TouchableOpacity>
