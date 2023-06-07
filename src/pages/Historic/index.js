@@ -22,16 +22,19 @@ const Kid = require('../../storage/controllers/KidController');
 const Agent = require('../../storage/controllers/AgentController');
 
 const Item = ({name}) => {
-  return (<View style = {styles.item}><View style = {styles.itemLeftPartition}>
-          <Text style = {styles.name} numberOfLines = {2}>{
-              name}</Text>
+  return (
+    <View style={styles.item}>
+      <View style={styles.itemLeftPartition}>
+        <Text style={styles.name} numberOfLines={2}>
+          {name}
+        </Text>
       </View>
-          <View style = {styles.itemRightPartition}>
-          <Text style = {styles.pendent}>
-              ENVIO</Text>
+      <View style={styles.itemRightPartition}>
+        <Text style={styles.pendent}>ENVIO</Text>
         <Text style={styles.pendent}>PENDENTE</Text>
-          </View>
-    </View>);
+      </View>
+    </View>
+  );
 };
 
 const Historic = (props) => {
@@ -110,7 +113,7 @@ const Historic = (props) => {
               }
             })
             .catch((res) => {
-              console.log(res)
+              console.log(res);
               Alert.alert(
                 'Não foi possivel estabelecer conexao com o servidor!',
                 'Tente os envios dos dados mais tarde',
@@ -176,7 +179,14 @@ const Historic = (props) => {
           </Text>
         </View>
       )}
-      {loading ? <LottieView source={require('../../assets/animations/loading.json')} progress={progress} loop={true} autoPlay={true}/> : null}
+      {loading ? (
+        <LottieView
+          source={require('../../assets/animations/loading.json')}
+          progress={progress}
+          loop={true}
+          autoPlay={true}
+        />
+      ) : null}
     </LinearGradient>
   );
 };

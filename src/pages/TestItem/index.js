@@ -25,30 +25,32 @@ export function navigationOptions({navigation}) {
   var disableHeaderButton = false;
   function updateTestKid(result) {
     TestKid.update({
-      id : navigation.state.params.id,
-      name : navigation.state.params.key,
-      result : result,
+      id: navigation.state.params.id,
+      name: navigation.state.params.key,
+      result: result,
     });
-    const resetAction = routeName => StackActions.reset({
-      index : 0,
-      actions : [ NavigationActions.navigate({routeName : routeName}) ],
-    });
+    const resetAction = (routeName) =>
+      StackActions.reset({
+        index: 0,
+        actions: [NavigationActions.navigate({routeName: routeName})],
+      });
     navigation.dispatch(resetAction('Test'));
   }
 
   return {
     headerRight: () => (
       <TouchableOpacity
-  style = {styles.buttonNoOP} disabled = {disableHeaderButton} onPress = {
-    () => {
-      disableHeaderButton = true;
-      updateTestKid(2);
-    }
-  } > < Text
-  style =
-      {{ fontSize: 14, fontWeight: 'normal', marginRight: 5, }} >
-      Sem Oportunidade<
-          /Text>
+        style={styles.buttonNoOP}
+        disabled={disableHeaderButton}
+        onPress={() => {
+          disableHeaderButton = true;
+          updateTestKid(2);
+        }}
+      >
+        {' '}
+        <Text style={{fontSize: 14, fontWeight: 'normal', marginRight: 5}}>
+          Sem Oportunidade
+        </Text>
         <Icon name={'ios-close'} size={28} color={'#6e7075'} />
       </TouchableOpacity>
     ),
@@ -58,7 +60,8 @@ export function navigationOptions({navigation}) {
         onPress={() => {
           navigation.goBack(null);
         }}
-        style={{width: 50}}>
+        style={{width: 50}}
+      >
         <Icon name="ios-arrow-round-back" size={42} style={{left: 15}} />
       </TouchableOpacity>
     ),
@@ -67,7 +70,7 @@ export function navigationOptions({navigation}) {
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
-const TestItem = props => {
+const TestItem = (props) => {
   const [image, setImage] = useState('');
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
@@ -107,7 +110,7 @@ const TestItem = props => {
       name: props.navigation.state.params.key,
       result: result,
     });
-    const resetAction = routeName =>
+    const resetAction = (routeName) =>
       StackActions.reset({
         index: 0,
         actions: [NavigationActions.navigate({routeName: routeName})],
@@ -123,32 +126,36 @@ const TestItem = props => {
     <LinearGradient
       start={{x: 0, y: 0}}
       colors={['#c0dfdf', '#ACD2EA', '#5aabab']}
-      style={styles.container}>
+      style={styles.container}
+    >
       <View style={{flex: 4}}>
-        <BoldText text={title} />< ImageZoom
+        <BoldText text={title} />
+        <ImageZoom
           cropWidth={width * 0.9}
           cropHeight={height * 0.35}
           imageWidth={width * 0.9}
           imageHeight={height * 0.35}
           minScale={0.9}
           maxScale={4}
-          style={styles.imageView}>
-          <Image source={
-    { uri: image }} style={
-    styles.image} />
+          style={styles.imageView}
+        >
+          <Image source={{uri: image}} style={styles.image} />
         </ImageZoom>
       </View>
       <View style={{flex: 4, top: 10}}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{justifyContent: 'space-between'}}>
+          contentContainerStyle={{justifyContent: 'space-between'}}
+        >
           <Text style={styles.text}>{text}</Text>
           <Text style={styles.question}>{question}</Text>
           {atention ? (
             <Text style={styles.question}>
               Atenção: <Text style={styles.text}>{atention}</Text>
             </Text>
-          ) : <></>}
+          ) : (
+            <></>
+          )}
           {hint ? (
             <Text style={styles.isValid}>
               Dica: <Text style={styles.text}>{hint}</Text>
@@ -181,21 +188,24 @@ const TestItem = props => {
       </View>
       <View style={styles.horizontalView}>
         <TouchableOpacity
-          style = {styles.buttonFail} disabled = {isDisable} onPress =
-              {
-                () => {
-                  setIsDisable(true);
-                  updateTestKid(0);
-                }
-              } > <Text style = {styles.buttonText}>
-                      Não</Text>
-        </TouchableOpacity>< TouchableOpacity
+          style={styles.buttonFail}
+          disabled={isDisable}
+          onPress={() => {
+            setIsDisable(true);
+            updateTestKid(0);
+          }}
+        >
+          {' '}
+          <Text style={styles.buttonText}>Não</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
           style={styles.buttonOK}
           disabled={isDisable}
           onPress={() => {
-    setIsDisable(true);
-    updateTestKid(1);
-          }}>
+            setIsDisable(true);
+            updateTestKid(1);
+          }}
+        >
           <Text style={styles.buttonText}>Sim</Text>
         </TouchableOpacity>
       </View>
