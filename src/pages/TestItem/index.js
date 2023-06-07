@@ -1,21 +1,24 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
-  View,
   Dimensions,
   Image,
+  ScrollView,
   Text,
   TouchableOpacity,
-  ScrollView,
+  View,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import Icon from 'react-native-vector-icons/Ionicons';
-import styles from './styles';
-import BoldText from '../../components/BoldText';
 import ImageZoom from 'react-native-image-pan-zoom';
-import images from '../../assets/images';
+import LinearGradient from 'react-native-linear-gradient';
 import {RFPercentage} from 'react-native-responsive-fontsize';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {NavigationActions, StackActions} from 'react-navigation';
+
+import images from '../../assets/images';
+import BoldText from '../../components/BoldText';
+
+import styles from './styles';
+
 const TestKid = require('../../storage/controllers/TestKidController');
 
 export function navigationOptions({navigation}) {
@@ -26,7 +29,7 @@ export function navigationOptions({navigation}) {
       name: navigation.state.params.key,
       result: result,
     });
-    const resetAction = routeName =>
+    const resetAction = (routeName) =>
       StackActions.reset({
         index: 0,
         actions: [NavigationActions.navigate({routeName: routeName})],
@@ -42,13 +45,10 @@ export function navigationOptions({navigation}) {
         onPress={() => {
           disableHeaderButton = true;
           updateTestKid(2);
-        }}>
-        <Text
-          style={{
-            fontSize: 14,
-            fontWeight: 'normal',
-            marginRight: 5,
-          }}>
+        }}
+      >
+        {' '}
+        <Text style={{fontSize: 14, fontWeight: 'normal', marginRight: 5}}>
           Sem Oportunidade
         </Text>
         <Icon name={'ios-close'} size={28} color={'#6e7075'} />
@@ -60,7 +60,8 @@ export function navigationOptions({navigation}) {
         onPress={() => {
           navigation.goBack(null);
         }}
-        style={{width: 50}}>
+        style={{width: 50}}
+      >
         <Icon name="ios-arrow-round-back" size={42} style={{left: 15}} />
       </TouchableOpacity>
     ),
@@ -69,7 +70,7 @@ export function navigationOptions({navigation}) {
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
-const TestItem = props => {
+const TestItem = (props) => {
   const [image, setImage] = useState('');
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
@@ -109,7 +110,7 @@ const TestItem = props => {
       name: props.navigation.state.params.key,
       result: result,
     });
-    const resetAction = routeName =>
+    const resetAction = (routeName) =>
       StackActions.reset({
         index: 0,
         actions: [NavigationActions.navigate({routeName: routeName})],
@@ -125,7 +126,8 @@ const TestItem = props => {
     <LinearGradient
       start={{x: 0, y: 0}}
       colors={['#c0dfdf', '#ACD2EA', '#5aabab']}
-      style={styles.container}>
+      style={styles.container}
+    >
       <View style={{flex: 4}}>
         <BoldText text={title} />
         <ImageZoom
@@ -135,21 +137,25 @@ const TestItem = props => {
           imageHeight={height * 0.35}
           minScale={0.9}
           maxScale={4}
-          style={styles.imageView}>
+          style={styles.imageView}
+        >
           <Image source={{uri: image}} style={styles.image} />
         </ImageZoom>
       </View>
       <View style={{flex: 4, top: 10}}>
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{justifyContent: 'space-between'}}>
+          contentContainerStyle={{justifyContent: 'space-between'}}
+        >
           <Text style={styles.text}>{text}</Text>
           <Text style={styles.question}>{question}</Text>
           {atention ? (
             <Text style={styles.question}>
               Atenção: <Text style={styles.text}>{atention}</Text>
             </Text>
-          ) : <></>}
+          ) : (
+            <></>
+          )}
           {hint ? (
             <Text style={styles.isValid}>
               Dica: <Text style={styles.text}>{hint}</Text>
@@ -187,7 +193,9 @@ const TestItem = props => {
           onPress={() => {
             setIsDisable(true);
             updateTestKid(0);
-          }}>
+          }}
+        >
+          {' '}
           <Text style={styles.buttonText}>Não</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -196,7 +204,8 @@ const TestItem = props => {
           onPress={() => {
             setIsDisable(true);
             updateTestKid(1);
-          }}>
+          }}
+        >
           <Text style={styles.buttonText}>Sim</Text>
         </TouchableOpacity>
       </View>

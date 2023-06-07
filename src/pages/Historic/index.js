@@ -1,17 +1,17 @@
 /* eslint-disable react-native/no-inline-styles */
 import NetInfo from '@react-native-community/netinfo';
+import LottieView from 'lottie-react-native';
 import React, {useEffect, useState} from 'react';
 import {
   Alert,
+  Animated,
   ScrollView,
   Text,
   ToastAndroid,
   TouchableOpacity,
-  Animated,
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import LottieView from 'lottie-react-native';
 
 import OrangeButton from '../../components/OrangeButton';
 import api from '../../services/api';
@@ -113,7 +113,7 @@ const Historic = (props) => {
               }
             })
             .catch((res) => {
-              console.log(res)
+              console.log(res);
               Alert.alert(
                 'Não foi possivel estabelecer conexao com o servidor!',
                 'Tente os envios dos dados mais tarde',
@@ -179,7 +179,14 @@ const Historic = (props) => {
           </Text>
         </View>
       )}
-      {loading ? <LottieView source={require('../../assets/animations/loading.json')} progress={progress} loop={true} autoPlay={true}/> : null}
+      {loading ? (
+        <LottieView
+          source={require('../../assets/animations/loading.json')}
+          progress={progress}
+          loop={true}
+          autoPlay={true}
+        />
+      ) : null}
     </LinearGradient>
   );
 };
