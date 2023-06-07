@@ -113,6 +113,7 @@ const Historic = (props) => {
               }
             })
             .catch((res) => {
+              console.log(res)
               Alert.alert(
                 'Não foi possivel estabelecer conexao com o servidor!',
                 'Tente os envios dos dados mais tarde',

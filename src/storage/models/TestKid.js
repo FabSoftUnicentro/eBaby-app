@@ -7,7 +7,7 @@ Itens.schema = {
   properties: {
     id: 'int',
     name: 'string',
-    result: 'bool',
+    result: 'int',
   },
 };
 

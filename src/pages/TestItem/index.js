@@ -41,7 +41,7 @@ export function navigationOptions({navigation}) {
         disabled={disableHeaderButton}
         onPress={() => {
           disableHeaderButton = true;
-          updateTestKid('Sem Oportunidade');
+          updateTestKid(2);
         }}>
         <Text
           style={{
@@ -186,7 +186,7 @@ const TestItem = props => {
           disabled={isDisable}
           onPress={() => {
             setIsDisable(true);
-            updateTestKid(false);
+            updateTestKid(0);
           }}>
           <Text style={styles.buttonText}>Não</Text>
         </TouchableOpacity>
@@ -195,7 +195,7 @@ const TestItem = props => {
           disabled={isDisable}
           onPress={() => {
             setIsDisable(true);
-            updateTestKid(true);
+            updateTestKid(1);
           }}>
           <Text style={styles.buttonText}>Sim</Text>
         </TouchableOpacity>
