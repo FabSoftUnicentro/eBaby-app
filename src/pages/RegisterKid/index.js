@@ -115,7 +115,7 @@ const RegisterKid = ({navigation}) => {
           );
           return;
         } else {
-          if (diffDays < 721) {
+          if (diffDays < 365*2) {
           } else {
             ToastAndroid.show(
               'A CRIANÇA NAO PODE TER MAIS DE 2 ANOS',
