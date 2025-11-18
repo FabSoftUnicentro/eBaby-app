@@ -1,10 +1,6 @@
 name: React Native Android Build Debug
 
 on:
-  push:
-    branches:
-      - 'fix/*'
-      - 'feature/*'
   pull_request:
     branches:
       - '*'
@@ -22,10 +18,15 @@ jobs:
         with:
           node-version: '8'
 
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3' 
+
       - name: Install npm dependencies
         run: npm install
 
-      - name: Build Android Release
+      - name: Build Android Debug
         run: cd android && ./gradlew assembleDebug
 
       - name: Upload Artifact
