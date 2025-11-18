@@ -16,12 +16,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '10'
+          node-version: '8'
 
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3' 
+          python-version: '2'
+
+      - name: Node Gyp
+        run: npm install -g node-gyp
 
       - name: Install npm dependencies
         run: npm install
