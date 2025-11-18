@@ -18,10 +18,10 @@ jobs:
         with:
           node-version: '8'
 
-      - name: Setup Python
-        uses: actions/setup-python@v3
+      - name: Set up Python 2.7
+        uses: LizardByte/setup-python-action@v2
         with:
-          python-version: '2.7'
+          python-version: 2.7
 
       - name: Set up JDK
         uses: actions/setup-java@v3
