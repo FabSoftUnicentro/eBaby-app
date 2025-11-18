@@ -21,7 +21,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: '2'
+          python-version: '3'
 
       - name: Node Gyp
         run: npm install -g node-gyp
