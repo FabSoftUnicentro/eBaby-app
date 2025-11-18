@@ -27,7 +27,7 @@ jobs:
         run: npm --build-from-source install node-pre-gyp
 
       - name: Install npm dependencies
-        run: npm install
+        run: npm install --ignore-sripts
 
       - name: Build Android Debug
         run: cd android && ./gradlew assembleDebug
