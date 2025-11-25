@@ -28,15 +28,16 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
+          cache: 'gradle'
 
-      - name: Install npm dependencies
-        run: npm install
+      - name: Change wrapper permissions
+        run: cd android && chmod +x ./gradlew
 
-      - name: Build Android Debug
-        run: |
-          cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug --stacktrace
+      - name: Build gradle project
+        run: cd android && ./gradlew build --stacktrace --debug
+
+      - name: Build apk debug project
+        run: cd android && ./gradlew assembleDebug --no-daemon --warning-mode all --stacktrace --debug
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
