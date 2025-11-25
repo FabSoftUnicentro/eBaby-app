@@ -1,0 +1,46 @@
+name: React Native Android Build Debug
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build_android:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '8'
+
+      - name: Set up Python 2.7
+        uses: LizardByte/setup-python-action@master
+        with:
+          python-version: 2.7
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Change wrapper permissions
+        run: cd android && chmod +x ./gradlew
+
+      - name: Build gradle project
+        run: cd android && ./gradlew build --stacktrace --debug
+
+      - name: Build apk debug project
+        run: cd android && ./gradlew assembleDebug --no-daemon --warning-mode all --stacktrace --debug
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug.apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
